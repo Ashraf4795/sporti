@@ -13,6 +13,12 @@
 		CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */; };
 		CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E91244B470E00F14A4A /* Assets.xcassets */; };
 		CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E93244B470E00F14A4A /* LaunchScreen.storyboard */; };
+		DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */; };
+		DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */; };
+		DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92D244B81D00070894E /* NetworkService.swift */; };
+		DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92F244B81EA0070894E /* DatabaseService.swift */; };
+		DC5DE935244B826C0070894E /* sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE934244B826C0070894E /* sport.swift */; };
+		DC5DE937244B829B0070894E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE936244B829B0070894E /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		CBF14E91244B470E00F14A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF14E94244B470E00F14A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBF14E96244B470E00F14A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
+		DC5DE92D244B81D00070894E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DC5DE92F244B81EA0070894E /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		DC5DE934244B826C0070894E /* sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sport.swift; sourceTree = "<group>"; };
+		DC5DE936244B829B0070894E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +68,14 @@
 		CBF14E86244B470E00F14A4A /* SprotiApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC5DE932244B82410070894E /* utils */,
+				DC5DE931244B82310070894E /* storyboards */,
+				DC5DE92C244B819F0070894E /* protocols */,
 				DC5DE927244B7F5D0070894E /* services */,
-				DC5DE926244B7F4A0070894E /* protocols */,
 				DC5DE925244B7F360070894E /* model */,
 				CBF14E87244B470E00F14A4A /* AppDelegate.swift */,
 				CBF14E89244B470E00F14A4A /* ViewController.swift */,
-				CBF14E8B244B470E00F14A4A /* Main.storyboard */,
 				CBF14E91244B470E00F14A4A /* Assets.xcassets */,
-				CBF14E93244B470E00F14A4A /* LaunchScreen.storyboard */,
 				CBF14E96244B470E00F14A4A /* Info.plist */,
 				CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */,
 			);
@@ -73,22 +85,44 @@
 		DC5DE925244B7F360070894E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DC5DE934244B826C0070894E /* sport.swift */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		DC5DE926244B7F4A0070894E /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = protocols;
 			sourceTree = "<group>";
 		};
 		DC5DE927244B7F5D0070894E /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC5DE92D244B81D00070894E /* NetworkService.swift */,
+				DC5DE92F244B81EA0070894E /* DatabaseService.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		DC5DE92C244B819F0070894E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */,
+				DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC5DE931244B82310070894E /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CBF14E93244B470E00F14A4A /* LaunchScreen.storyboard */,
+				CBF14E8B244B470E00F14A4A /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		DC5DE932244B82410070894E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				DC5DE936244B829B0070894E /* Parser.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
+				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
+				DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */,
 				CBF14E8A244B470E00F14A4A /* ViewController.swift in Sources */,
+				DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */,
+				DC5DE937244B829B0070894E /* Parser.swift in Sources */,
+				DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */,
+				DC5DE935244B826C0070894E /* sport.swift in Sources */,
 				CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
