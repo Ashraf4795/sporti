@@ -56,6 +56,9 @@
 		CBF14E86244B470E00F14A4A /* SprotiApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC5DE927244B7F5D0070894E /* services */,
+				DC5DE926244B7F4A0070894E /* protocols */,
+				DC5DE925244B7F360070894E /* model */,
 				CBF14E87244B470E00F14A4A /* AppDelegate.swift */,
 				CBF14E89244B470E00F14A4A /* ViewController.swift */,
 				CBF14E8B244B470E00F14A4A /* Main.storyboard */,
@@ -65,6 +68,27 @@
 				CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */,
 			);
 			path = SprotiApp;
+			sourceTree = "<group>";
+		};
+		DC5DE925244B7F360070894E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DC5DE926244B7F4A0070894E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC5DE927244B7F5D0070894E /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
