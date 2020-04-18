@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E87244B470E00F14A4A /* AppDelegate.swift */; };
-		CBF14E8A244B470E00F14A4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E89244B470E00F14A4A /* ViewController.swift */; };
 		CBF14E8D244B470E00F14A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E8B244B470E00F14A4A /* Main.storyboard */; };
 		CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */; };
 		CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E91244B470E00F14A4A /* Assets.xcassets */; };
@@ -19,12 +18,16 @@
 		DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92F244B81EA0070894E /* DatabaseService.swift */; };
 		DC5DE935244B826C0070894E /* sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE934244B826C0070894E /* sport.swift */; };
 		DC5DE937244B829B0070894E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE936244B829B0070894E /* Parser.swift */; };
+		DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE939244B95390070894E /* FavouritLeugesViewController.swift */; };
+		DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE93B244B965B0070894E /* SportViewController.swift */; };
+		DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */; };
+		DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE93F244B97290070894E /* LeugesViewController.swift */; };
+		DC5DE942244B97650070894E /* leugesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE941244B97650070894E /* leugesDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBF14E84244B470E00F14A4A /* SprotiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprotiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF14E87244B470E00F14A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBF14E89244B470E00F14A4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBF14E8C244B470E00F14A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBF14E8F244B470E00F14A4A /* SprotiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SprotiApp.xcdatamodel; sourceTree = "<group>"; };
 		CBF14E91244B470E00F14A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		DC5DE92F244B81EA0070894E /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		DC5DE934244B826C0070894E /* sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sport.swift; sourceTree = "<group>"; };
 		DC5DE936244B829B0070894E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		DC5DE939244B95390070894E /* FavouritLeugesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritLeugesViewController.swift; sourceTree = "<group>"; };
+		DC5DE93B244B965B0070894E /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
+		DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		DC5DE93F244B97290070894E /* LeugesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeugesViewController.swift; sourceTree = "<group>"; };
+		DC5DE941244B97650070894E /* leugesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leugesDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +76,13 @@
 		CBF14E86244B470E00F14A4A /* SprotiApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC5DE938244B95050070894E /* views */,
 				DC5DE932244B82410070894E /* utils */,
 				DC5DE931244B82310070894E /* storyboards */,
 				DC5DE92C244B819F0070894E /* protocols */,
 				DC5DE927244B7F5D0070894E /* services */,
 				DC5DE925244B7F360070894E /* model */,
 				CBF14E87244B470E00F14A4A /* AppDelegate.swift */,
-				CBF14E89244B470E00F14A4A /* ViewController.swift */,
 				CBF14E91244B470E00F14A4A /* Assets.xcassets */,
 				CBF14E96244B470E00F14A4A /* Info.plist */,
 				CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */,
@@ -113,6 +121,7 @@
 			children = (
 				CBF14E93244B470E00F14A4A /* LaunchScreen.storyboard */,
 				CBF14E8B244B470E00F14A4A /* Main.storyboard */,
+				DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -123,6 +132,17 @@
 				DC5DE936244B829B0070894E /* Parser.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		DC5DE938244B95050070894E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DC5DE939244B95390070894E /* FavouritLeugesViewController.swift */,
+				DC5DE93B244B965B0070894E /* SportViewController.swift */,
+				DC5DE93F244B97290070894E /* LeugesViewController.swift */,
+				DC5DE941244B97650070894E /* leugesDetailsViewController.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +206,7 @@
 			files = (
 				CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */,
 				CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */,
+				DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */,
 				CBF14E8D244B470E00F14A4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,10 +221,13 @@
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
 				DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */,
-				CBF14E8A244B470E00F14A4A /* ViewController.swift in Sources */,
+				DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */,
 				DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */,
 				DC5DE937244B829B0070894E /* Parser.swift in Sources */,
+				DC5DE942244B97650070894E /* leugesDetailsViewController.swift in Sources */,
 				DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */,
+				DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */,
+				DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */,
 				DC5DE935244B826C0070894E /* sport.swift in Sources */,
 				CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */,
 			);
