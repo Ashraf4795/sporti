@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class NetworkService {
+import Alamofire
+class NetworkService : NetworkServiceProtocol{
    
     /*sara*/
     /*
@@ -34,33 +35,21 @@ class NetworkService {
     /*sara*/
     
     /*Ashraf*/
-    /*
-     a
-     b
-     c
-     d
-     e
-     f
-     g
-     h
-     i
-     g
-     k
-     l
-     m
-     n
-     o
-     q
-     r
-     s
-     t
-     i
-     v
-     w
-     x
-     y
-     z
-    
-     */
+    func fetchLeaguesData(strSport: String) -> [League] {
+        var leagues:[League] = []
+        Alamofire.request(Const.ALL_LEAGUES).responseJSON{(response) in
+            if let data = (response.data) {
+                let json = JSON(data)
+                for league in json["countrys"].arrayValue {
+                    print(league["idLeague"].intValue)
+                    self.leagues.append(League(leagueId: league["idLeague"].intValue, strLeague: league["strLeague"].stringValue, strCountry: league["strCountry"].stringValue, strBadge: league["strBadge"].stringValue, strYoutube: league["strYoutube"].stringValue))
+                }
+                self.printLeagues(leagues: self.leagues)
+            }else {
+                print("else")
+            }
+            
+        }
+    }
     /*Ashraf*/
 }

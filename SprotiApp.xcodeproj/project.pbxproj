@@ -26,13 +26,15 @@
 		DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */; };
 		DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE93F244B97290070894E /* LeugesViewController.swift */; };
 		DC5DE942244B97650070894E /* leugesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE941244B97650070894E /* leugesDetailsViewController.swift */; };
+		DC9968E1244CF4860073EDF1 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E0244CF4860073EDF1 /* League.swift */; };
+		DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E2244CF5DB0073EDF1 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D15431A37C1E6E31DF45473 /* Pods_SprotiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SprotiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C0C984FBD493AD777D5937 /* Pods-SprotiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprotiApp.release.xcconfig"; path = "Target Support Files/Pods-SprotiApp/Pods-SprotiApp.release.xcconfig"; sourceTree = "<group>"; };
 		C5256EAAC8D624CF89334E9C /* Pods-SprotiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprotiApp.debug.xcconfig"; path = "Target Support Files/Pods-SprotiApp/Pods-SprotiApp.debug.xcconfig"; sourceTree = "<group>"; };
-		CB95CC50244CA18E00355DC3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		CB95CC50244CA18E00355DC3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CBF14E84244B470E00F14A4A /* SprotiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprotiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF14E87244B470E00F14A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBF14E8C244B470E00F14A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		DC5DE93F244B97290070894E /* LeugesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeugesViewController.swift; sourceTree = "<group>"; };
 		DC5DE941244B97650070894E /* leugesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leugesDetailsViewController.swift; sourceTree = "<group>"; };
+		DC9968E0244CF4860073EDF1 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		DC9968E2244CF5DB0073EDF1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,6 @@
 				C5256EAAC8D624CF89334E9C /* Pods-SprotiApp.debug.xcconfig */,
 				A3C0C984FBD493AD777D5937 /* Pods-SprotiApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,6 +119,7 @@
 				CBF14E91244B470E00F14A4A /* Assets.xcassets */,
 				CBF14E96244B470E00F14A4A /* Info.plist */,
 				CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */,
+				DC9968E2244CF5DB0073EDF1 /* Const.swift */,
 			);
 			path = SprotiApp;
 			sourceTree = "<group>";
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DC5DE934244B826C0070894E /* sport.swift */,
+				DC9968E0244CF4860073EDF1 /* League.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9968E1244CF4860073EDF1 /* League.swift in Sources */,
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
 				CBF14EA3244BAADA00F14A4A /* TeamDetailsViewController.swift in Sources */,
@@ -316,6 +322,7 @@
 				DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */,
 				DC5DE935244B826C0070894E /* sport.swift in Sources */,
 				CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */,
+				DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
