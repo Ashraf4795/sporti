@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D0D27F4775710737627DDD /* Pods_SprotiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D15431A37C1E6E31DF45473 /* Pods_SprotiApp.framework */; };
+		CB95CC51244CA18E00355DC3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CB95CC50244CA18E00355DC3 /* Podfile */; };
 		CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E87244B470E00F14A4A /* AppDelegate.swift */; };
 		CBF14E8D244B470E00F14A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E8B244B470E00F14A4A /* Main.storyboard */; };
 		CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */; };
@@ -27,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D15431A37C1E6E31DF45473 /* Pods_SprotiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SprotiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C0C984FBD493AD777D5937 /* Pods-SprotiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprotiApp.release.xcconfig"; path = "Target Support Files/Pods-SprotiApp/Pods-SprotiApp.release.xcconfig"; sourceTree = "<group>"; };
+		C5256EAAC8D624CF89334E9C /* Pods-SprotiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprotiApp.debug.xcconfig"; path = "Target Support Files/Pods-SprotiApp/Pods-SprotiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CB95CC50244CA18E00355DC3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		CBF14E84244B470E00F14A4A /* SprotiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprotiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF14E87244B470E00F14A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBF14E8C244B470E00F14A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,17 +59,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D0D27F4775710737627DDD /* Pods_SprotiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B600168E62F19365C0ED09A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5256EAAC8D624CF89334E9C /* Pods-SprotiApp.debug.xcconfig */,
+				A3C0C984FBD493AD777D5937 /* Pods-SprotiApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A39CEFEE0219E0D76A24B359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D15431A37C1E6E31DF45473 /* Pods_SprotiApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBF14E7B244B470E00F14A4A = {
 			isa = PBXGroup;
 			children = (
+				CB95CC50244CA18E00355DC3 /* Podfile */,
 				CBF14E86244B470E00F14A4A /* SprotiApp */,
 				CBF14E85244B470E00F14A4A /* Products */,
+				3B600168E62F19365C0ED09A /* Pods */,
+				A39CEFEE0219E0D76A24B359 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBF14E99244B470E00F14A4A /* Build configuration list for PBXNativeTarget "SprotiApp" */;
 			buildPhases = (
+				FF1DB66FDB4F5B453692C0A7 /* [CP] Check Pods Manifest.lock */,
 				CBF14E80244B470E00F14A4A /* Sources */,
 				CBF14E81244B470E00F14A4A /* Frameworks */,
 				CBF14E82244B470E00F14A4A /* Resources */,
+				7DB698ED4BF0F0829538B951 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB95CC51244CA18E00355DC3 /* Podfile in Resources */,
 				CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */,
 				CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */,
 				DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */,
@@ -215,6 +246,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB698ED4BF0F0829538B951 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SprotiApp/Pods-SprotiApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SprotiApp/Pods-SprotiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF1DB66FDB4F5B453692C0A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SprotiApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBF14E80244B470E00F14A4A /* Sources */ = {
@@ -368,6 +450,7 @@
 		};
 		CBF14E9A244B470E00F14A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5256EAAC8D624CF89334E9C /* Pods-SprotiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +465,7 @@
 		};
 		CBF14E9B244B470E00F14A4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C0C984FBD493AD777D5937 /* Pods-SprotiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
