@@ -12,6 +12,7 @@
 		CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */; };
 		CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E91244B470E00F14A4A /* Assets.xcassets */; };
 		CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF14E93244B470E00F14A4A /* LaunchScreen.storyboard */; };
+		CBF14EA3244BAADA00F14A4A /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF14EA2244BAADA00F14A4A /* TeamDetailsViewController.swift */; };
 		DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */; };
 		DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */; };
 		DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92D244B81D00070894E /* NetworkService.swift */; };
@@ -33,6 +34,7 @@
 		CBF14E91244B470E00F14A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF14E94244B470E00F14A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBF14E96244B470E00F14A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF14EA2244BAADA00F14A4A /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92D244B81D00070894E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				DC5DE93B244B965B0070894E /* SportViewController.swift */,
 				DC5DE93F244B97290070894E /* LeugesViewController.swift */,
 				DC5DE941244B97650070894E /* leugesDetailsViewController.swift */,
+				CBF14EA2244BAADA00F14A4A /* TeamDetailsViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
+				CBF14EA3244BAADA00F14A4A /* TeamDetailsViewController.swift in Sources */,
 				DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */,
 				DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */,
 				DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */,
