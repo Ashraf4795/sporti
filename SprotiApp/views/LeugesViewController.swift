@@ -49,7 +49,7 @@ UITableViewDelegate, LeagueDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        leagues.count
+        return leagues.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
