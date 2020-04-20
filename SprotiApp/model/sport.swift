@@ -8,5 +8,11 @@
 
 import Foundation
 class Sport {
-    
+    var strSportThumb = ""
+    var strSport = ""
+    //var idSport = 0
+    init(strSport :String, strSportThumb :String ) {
+        self.strSportThumb = strSportThumb
+        self.strSport = strSport
+    }
 }
