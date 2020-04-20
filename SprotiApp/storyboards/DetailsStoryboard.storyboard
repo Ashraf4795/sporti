@@ -11,7 +11,7 @@
         <!--Leuges Details View Controller-->
         <scene sceneID="lEe-H0-7gj">
             <objects>
-                <viewController id="JCA-b3-1Zx" customClass="leugesDetailsViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leagueDetails" id="JCA-b3-1Zx" customClass="LeugesDetailsViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cqa-Zt-x9B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

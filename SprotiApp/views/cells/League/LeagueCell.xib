@@ -17,19 +17,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="486" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="England Leagues is Awsome" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4Sw-W1-hQg">
-                        <rect key="frame" x="80" y="44" width="299" height="26.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-fw-Ste">
-                        <rect key="frame" x="395" y="16" width="75" height="77"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="77" id="DgW-Rk-b01"/>
-                            <constraint firstAttribute="width" constant="75" id="MFs-i0-nBt"/>
-                        </constraints>
-                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7by-p4-UoS">
                         <rect key="frame" x="10" y="25" width="60" height="60"/>
                         <constraints>
@@ -37,17 +24,30 @@
                             <constraint firstAttribute="width" constant="60" id="ysC-iQ-1jB"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="England Leagues is Awsome" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4Sw-W1-hQg">
+                        <rect key="frame" x="80" y="44" width="324" height="26.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-fw-Ste">
+                        <rect key="frame" x="420" y="33" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="55E-cJ-LLg"/>
+                            <constraint firstAttribute="width" constant="50" id="HII-C9-ytF"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4Sw-W1-hQg" firstAttribute="leading" secondItem="7by-p4-UoS" secondAttribute="trailing" constant="10" id="11E-0H-36B"/>
                     <constraint firstItem="7by-p4-UoS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="1zv-mx-taH"/>
-                    <constraint firstAttribute="trailing" secondItem="kt9-fw-Ste" secondAttribute="trailing" constant="16" id="64F-m5-sll"/>
-                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="16" id="FDY-AK-AUw"/>
                     <constraint firstItem="7by-p4-UoS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KVh-P3-2pW"/>
                     <constraint firstAttribute="bottom" secondItem="7by-p4-UoS" secondAttribute="bottom" constant="23" id="R6a-qE-ihT"/>
-                    <constraint firstAttribute="bottom" secondItem="kt9-fw-Ste" secondAttribute="bottom" constant="15" id="lw0-xS-QLM"/>
+                    <constraint firstAttribute="trailing" secondItem="kt9-fw-Ste" secondAttribute="trailing" constant="16" id="WgW-iQ-q6m"/>
+                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="16" id="ZbM-Kb-4gO"/>
+                    <constraint firstItem="kt9-fw-Ste" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="bVa-EZ-U8U"/>
+                    <constraint firstAttribute="bottom" secondItem="kt9-fw-Ste" secondAttribute="bottom" constant="25" id="g7n-0n-vFC"/>
                     <constraint firstAttribute="bottom" secondItem="4Sw-W1-hQg" secondAttribute="bottom" constant="37.5" id="mfX-VI-QKf"/>
-                    <constraint firstItem="kt9-fw-Ste" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vSs-yd-ntY"/>
                     <constraint firstItem="4Sw-W1-hQg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="xLm-y6-nqr"/>
                 </constraints>
             </tableViewCellContentView>

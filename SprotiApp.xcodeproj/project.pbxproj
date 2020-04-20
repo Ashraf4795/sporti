@@ -19,6 +19,9 @@
 		DC0FA466244D063E0035E48B /* LeaguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA465244D063E0035E48B /* LeaguePresenter.swift */; };
 		DC0FA46B244D1D0E0035E48B /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0FA469244D1D0E0035E48B /* LeagueCell.xib */; };
 		DC0FA46E244D23E40035E48B /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA46D244D23E40035E48B /* LeagueCell.swift */; };
+		DC0FA470244D44140035E48B /* LeagueDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */; };
+		DC0FA472244D45440035E48B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA471244D45440035E48B /* Event.swift */; };
+		DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */; };
 		DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */; };
 		DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */; };
 		DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92D244B81D00070894E /* NetworkService.swift */; };
@@ -29,7 +32,7 @@
 		DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE93B244B965B0070894E /* SportViewController.swift */; };
 		DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */; };
 		DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE93F244B97290070894E /* LeugesViewController.swift */; };
-		DC5DE942244B97650070894E /* leugesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE941244B97650070894E /* leugesDetailsViewController.swift */; };
+		DC5DE942244B97650070894E /* LeugesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE941244B97650070894E /* LeugesDetailsViewController.swift */; };
 		DC9968E1244CF4860073EDF1 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E0244CF4860073EDF1 /* League.swift */; };
 		DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E2244CF5DB0073EDF1 /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		DC0FA465244D063E0035E48B /* LeaguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguePresenter.swift; sourceTree = "<group>"; };
 		DC0FA469244D1D0E0035E48B /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 		DC0FA46D244D23E40035E48B /* LeagueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
+		DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailDelegate.swift; sourceTree = "<group>"; };
+		DC0FA471244D45440035E48B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsPresenter.swift; sourceTree = "<group>"; };
 		DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92D244B81D00070894E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -61,7 +67,7 @@
 		DC5DE93B244B965B0070894E /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		DC5DE93D244B96EF0070894E /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		DC5DE93F244B97290070894E /* LeugesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeugesViewController.swift; sourceTree = "<group>"; };
-		DC5DE941244B97650070894E /* leugesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leugesDetailsViewController.swift; sourceTree = "<group>"; };
+		DC5DE941244B97650070894E /* LeugesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeugesDetailsViewController.swift; sourceTree = "<group>"; };
 		DC9968E0244CF4860073EDF1 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		DC9968E2244CF5DB0073EDF1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0FA462244D055A0035E48B /* LeagueDelegate.swift */,
+				DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */,
 			);
 			path = view_delegates;
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0FA465244D063E0035E48B /* LeaguePresenter.swift */,
+				DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */,
 			);
 			path = presenters;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			children = (
 				DC5DE934244B826C0070894E /* sport.swift */,
 				DC9968E0244CF4860073EDF1 /* League.swift */,
+				DC0FA471244D45440035E48B /* Event.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -219,7 +228,7 @@
 				DC5DE939244B95390070894E /* FavouritLeugesViewController.swift */,
 				DC5DE93B244B965B0070894E /* SportViewController.swift */,
 				DC5DE93F244B97290070894E /* LeugesViewController.swift */,
-				DC5DE941244B97650070894E /* leugesDetailsViewController.swift */,
+				DC5DE941244B97650070894E /* LeugesDetailsViewController.swift */,
 				CBF14EA2244BAADA00F14A4A /* TeamDetailsViewController.swift */,
 			);
 			path = views;
@@ -349,17 +358,20 @@
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
 				CBF14EA3244BAADA00F14A4A /* TeamDetailsViewController.swift in Sources */,
+				DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */,
+				DC0FA472244D45440035E48B /* Event.swift in Sources */,
 				DC0FA46E244D23E40035E48B /* LeagueCell.swift in Sources */,
 				DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */,
 				DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */,
 				DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */,
 				DC0FA466244D063E0035E48B /* LeaguePresenter.swift in Sources */,
 				DC5DE937244B829B0070894E /* Parser.swift in Sources */,
-				DC5DE942244B97650070894E /* leugesDetailsViewController.swift in Sources */,
+				DC5DE942244B97650070894E /* LeugesDetailsViewController.swift in Sources */,
 				DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */,
 				DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */,
 				DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */,
 				DC5DE935244B826C0070894E /* sport.swift in Sources */,
+				DC0FA470244D44140035E48B /* LeagueDetailDelegate.swift in Sources */,
 				DC0FA463244D055A0035E48B /* LeagueDelegate.swift in Sources */,
 				CBF14E88244B470E00F14A4A /* AppDelegate.swift in Sources */,
 				DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */,

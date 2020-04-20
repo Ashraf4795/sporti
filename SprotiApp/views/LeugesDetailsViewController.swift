@@ -8,14 +8,26 @@
 
 import UIKit
 
-class leugesDetailsViewController: UIViewController {
-
+class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate{
+    
+    var events:[Event] = []
+    var leagueId:Int = 123
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let leagueDetailsPresenter = LeagueDetailsPresenter(leagueDetailDelegate: self)
+        leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: leagueId,_url:Const.UPCOMING_EVENT)
     }
     
+    
+    
+    func fetchedUpcomingEventData(events: [Event]) {
+        print("event from view \(events)")
+    }
+    
+    func error(message: String) {
+        print(message)
+    }
 
     /*
     // MARK: - Navigation

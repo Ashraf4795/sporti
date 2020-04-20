@@ -32,6 +32,15 @@ UITableViewDelegate, LeagueDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "league") as! LeagueCell
         cell.title.text = league.strLeague
         cell.logo.kf.setImage(with : URL(string: league.strBadge))
+        
+        //add youtube gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+         cell.youtubeLogo.tag = indexPath.row
+
+         tapGestureRecognizer.numberOfTapsRequired = 1
+         cell.youtubeLogo.isUserInteractionEnabled = true
+         cell.youtubeLogo.addGestureRecognizer(tapGestureRecognizer)
+        
         return cell
     }
 
@@ -43,6 +52,14 @@ UITableViewDelegate, LeagueDelegate {
         leagues.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "DetailsStoryboard", bundle: nil)
+        guard let newViewController = storyBoard.instantiateViewController(withIdentifier: "leagueDetails") as? LeugesDetailsViewController else {
+            return
+        }
+        newViewController.leagueId = leagues[indexPath.row].leagueId
+                self.present(newViewController, animated: true, completion: nil)
+    }
     func fetchedLeaguesData(leagues: [League]) {
         self.leagues = leagues
         tableView.reloadData()
@@ -53,6 +70,18 @@ UITableViewDelegate, LeagueDelegate {
     }
     
     
+    //youtube tapping callback
+    @objc func imageTapped (tapGestureRecognizer: UITapGestureRecognizer){
+        let imgView = tapGestureRecognizer.view as! UIImageView
+        if(leagues[imgView.tag].strYoutube != ""){
+           
+        }else{
+            print("no youtube url")
+            //show alart dialog
+        }
+        
+        
+    }
 
     
     /*

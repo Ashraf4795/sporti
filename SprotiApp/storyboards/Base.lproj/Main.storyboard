@@ -22,7 +22,7 @@
                                 <state key="normal" title="to next storyBoard"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvT-Ud-7N8"/>
-                                    <segue destination="4b7-Mr-OAN" kind="showDetail" id="V7L-hG-ab9"/>
+                                    <segue destination="4b7-Mr-OAN" kind="showDetail" id="pM9-FY-1lv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-dZ-7Zb">
