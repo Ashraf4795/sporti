@@ -11,6 +11,7 @@ import Foundation
 class Const {
 
     /*sara*/
+    static let ALL_SPORTS:String = "https://www.thesportsdb.com/api/v1/json/1/all_sports.php"
     /*sara*/
     
     /*Ashraf*/

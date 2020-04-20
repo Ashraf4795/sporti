@@ -10,8 +10,8 @@ import Foundation
 
 protocol NetworkServiceProtocol {
    /*sara*/
-    
-    
+    //fetch all sports
+    func fetchSports(delegate:SportDelegate)
     /*sara*/
     
     /*Ashraf*/

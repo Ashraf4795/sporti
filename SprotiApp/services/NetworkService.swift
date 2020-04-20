@@ -14,27 +14,22 @@ class NetworkService : NetworkServiceProtocol{
    
     static let INSTANCE:NetworkServiceProtocol = NetworkService()
     /*sara*/
-    /*
-     a
-     b
-     c
-     d
-     e
-     f
-     g
-     h
-     i
-     j
-     k
-     l
-     m
-     n
-     o
-     p
-     q
-     r
-     s*/
-    
+    //get all sports
+    func fetchSports(delegate: SportDelegate) {
+        var sports:[Sport] = []
+        Alamofire.request(Const.ALL_SPORTS).responseJSON{(response) in
+            if let data = (response.data) {
+                let json = JSON(data)
+            
+                for sport in json["sports"].arrayValue {
+                    sports.append(Sport(strSport: sport["strSport"].stringValue, strSportThumb: sport["strSportThumb"].stringValue))
+                }
+                delegate.fetchedSports(sports: sports)
+            }else {
+                delegate.error(message: "no sports fetched")
+            }
+        }
+    }
     /*sara*/
     
     /*Ashraf*/
