@@ -14,6 +14,6 @@ class Const {
     /*sara*/
     
     /*Ashraf*/
-    static let ALL_LEAGUES:String = "https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=England"
+    static let ALL_LEAGUES:String = "https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?s="
     /*Ashraf*/
 }

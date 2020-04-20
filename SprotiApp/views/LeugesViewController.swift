@@ -7,16 +7,54 @@
 //
 
 import UIKit
+import Kingfisher
 
-class LeugesViewController: UIViewController {
-
+class LeugesViewController: UIViewController ,UITableViewDataSource,
+UITableViewDelegate, LeagueDelegate {
+    
+    var leagues:[League] = []
+    var leaguesTitle:String = "Soccer"
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("view Did Load")
+        let leaguePresenter:LeaguePresenter = LeaguePresenter(leagueDeleagte: self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "LeagueCell", bundle: nil), forCellReuseIdentifier: "league")
+        
+        leaguePresenter.fetchLeaguesData(_strSport: self.leaguesTitle)	
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let league = leagues[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "league") as! LeagueCell
+        cell.title.text = league.strLeague
+        cell.logo.kf.setImage(with : URL(string: league.strBadge))
+        return cell
+    }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        leagues.count
+    }
+    
+    func fetchedLeaguesData(leagues: [League]) {
+        self.leagues = leagues
+        tableView.reloadData()
+    }
+    
+    func error(message: String) {
+        print("error")
+    }
+    
+    
+
+    
     /*
     // MARK: - Navigation
 

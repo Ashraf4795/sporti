@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 import Alamofire
+
 class NetworkService : NetworkServiceProtocol{
    
+    static let INSTANCE:NetworkServiceProtocol = NetworkService()
     /*sara*/
     /*
      a
@@ -35,20 +38,20 @@ class NetworkService : NetworkServiceProtocol{
     /*sara*/
     
     /*Ashraf*/
-    func fetchLeaguesData(strSport: String) -> [League] {
+    func fetchLeaguesData(strSport: String,delegate:LeagueDelegate) {
         var leagues:[League] = []
-        Alamofire.request(Const.ALL_LEAGUES).responseJSON{(response) in
+        print("URL: \(Const.ALL_LEAGUES+strSport)")
+        Alamofire.request(Const.ALL_LEAGUES+strSport).responseJSON{(response) in
             if let data = (response.data) {
                 let json = JSON(data)
                 for league in json["countrys"].arrayValue {
-                    print(league["idLeague"].intValue)
-                    self.leagues.append(League(leagueId: league["idLeague"].intValue, strLeague: league["strLeague"].stringValue, strCountry: league["strCountry"].stringValue, strBadge: league["strBadge"].stringValue, strYoutube: league["strYoutube"].stringValue))
+                    leagues.append(League(leagueId: league["idLeague"].intValue, strLeague: league["strLeague"].stringValue, strCountry: league["strCountry"].stringValue, strBadge: league["strBadge"].stringValue, strYoutube: league["strYoutube"].stringValue))
                 }
-                self.printLeagues(leagues: self.leagues)
+                delegate.fetchedLeaguesData(leagues: leagues)
+                print(leagues)
             }else {
-                print("else")
+                delegate.error(message: "no leagues fetched")
             }
-            
         }
     }
     /*Ashraf*/

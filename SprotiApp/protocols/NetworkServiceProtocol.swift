@@ -16,7 +16,7 @@ protocol NetworkServiceProtocol {
     
     /*Ashraf*/
     //fetch all leagues for a specific sport
-    func fetchLeaguesData(strSport:String)->[League]
+    func fetchLeaguesData(strSport:String,delegate:LeagueDelegate)
     /*Ashraf*/
 
 }
