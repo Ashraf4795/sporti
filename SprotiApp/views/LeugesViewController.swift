@@ -66,7 +66,7 @@ UITableViewDelegate, LeagueDelegate {
         tableView.reloadData()
     }
     
-    func error(message: String) {
+    func error(result:Result ,message: String) {
         print("error")
     }
     

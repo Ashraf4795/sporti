@@ -9,5 +9,7 @@
 import Foundation
 protocol LeagueDetailDelegate {
     func fetchedUpcomingEventData (events:[Event])
-    func error(message:String)
+    func fetchedLatestResultData(events:[Event])
+    func fetchedTeamDetails(teams:[Team])
+    func error(result:Result,message:String)
 }

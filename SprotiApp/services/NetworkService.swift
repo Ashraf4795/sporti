@@ -39,17 +39,18 @@ class NetworkService : NetworkServiceProtocol{
         var leagues:[League] = []
         print("URL: \(Const.ALL_LEAGUES+strSport)")
         Alamofire.request(Const.ALL_LEAGUES+strSport).responseJSON{(response) in
-            if let data = (response.data) {
-                let json = JSON(data)
-               
-                for league in json["countrys"].arrayValue {
-                     print(league["idLeague"].intValue)
-                    leagues.append(League(leagueId: league["idLeague"].intValue, strLeague: league["strLeague"].stringValue, strCountry: league["strCountry"].stringValue, strBadge: league["strBadge"].stringValue, strYoutube: league["strYoutube"].stringValue))
+            if response.result.isSuccess {
+                if let data = (response.data) {
+                    let json = JSON(data)
+                   
+                    leagues = Parser.parseLeaguesData(json: json)
+                    delegate.fetchedLeaguesData(leagues: leagues)
+                    print(leagues)
+                }else {
+                    delegate.error(result:Result.NO_DATA, message: "No Data Fetched")
                 }
-                delegate.fetchedLeaguesData(leagues: leagues)
-                print(leagues)
             }else {
-                delegate.error(message: "no leagues fetched")
+                delegate.error(result: Result.ERROR, message: "Network Error")
             }
         }
     }
@@ -60,20 +61,37 @@ class NetworkService : NetworkServiceProtocol{
         var events:[Event] = []
         print("upcoming URL: \(url+String(leagueId))")
         Alamofire.request(url+String(leagueId)).responseJSON{(response) in
-            if let data = (response.data) {
-                let json = JSON(data)
-                for innerEvent in json["events"].arrayValue {
-                    let eventId = innerEvent["idEvent"].intValue
-                    events.append(Event(idLeague: innerEvent["idLeague"].intValue, idEvent: eventId, strEvent: innerEvent["strEvent"].stringValue, strHomeTeam: innerEvent["strHomeTeam"].stringValue, strAwayTeam: innerEvent["strAwayTeam"].stringValue, strDate: innerEvent["strDate"].stringValue, strTime: innerEvent["strTime"].stringValue, idHomeTeam: innerEvent["idHomeTeam"].intValue, idAwayTeam: innerEvent["idAwayTeam"].intValue, intHomeScore: innerEvent["intHomeScore"].intValue, intAwayScore: innerEvent["intAwayScore"].intValue))
-
+            if response.result.isSuccess {
+                if let data = (response.data) {
+                    let json = JSON(data)
+                    events = Parser.parseUpcomingEvent(json: json)
+                    delegate.fetchedUpcomingEventData(events: events)
+                }else {
+                    delegate.error(result:Result.NO_DATA,message: "No Data Fetched")
                 }
-                delegate.fetchedUpcomingEventData(events: events)
             }else {
-                delegate.error(message: "no events fetched")
+                delegate.error(result: Result.ERROR, message: "Network Error")
             }
         }
     }
       
+    // fetch all teams in a league
+    func fetchTeamsInAleague(leagueId: Int, url: String, delegate: LeagueDetailDelegate) {
+        var teams:[Team] = []
+        Alamofire.request(url+String(leagueId)).responseJSON{(response) in
+            if response.result.isSuccess {
+                if let data = (response.data) {
+                    let json = JSON(data)
+                    teams = Parser.parseTeamsDetails(json: json)
+                    delegate.fetchedTeamDetails(teams: teams)
+                }else {
+                    delegate.error(result:Result.NO_DATA,message: "No Data Fetched")
+                }
+            }else {
+                delegate.error(result: Result.ERROR, message: "Network Error")
+            }
+        }
+    }
     
     /*Ashraf*/
 }

@@ -12,5 +12,5 @@ import Foundation
 protocol LeagueDelegate {
     
     func fetchedLeaguesData (leagues:[League])
-    func error(message:String)
+    func error(result:Result,message:String)
 }

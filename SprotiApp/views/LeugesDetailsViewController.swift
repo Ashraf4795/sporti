@@ -16,27 +16,57 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         let leagueDetailsPresenter = LeagueDetailsPresenter(leagueDetailDelegate: self)
-        leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: leagueId,_url:Const.UPCOMING_EVENT)
+        leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: leagueId, _url: Const.UPCOMING_EVENT)
+        leagueDetailsPresenter.fetchTeamDetails(_leagueId: leagueId, _url: Const.TEAMS_DETAILS, delegate: self)
     }
     
     
     
     func fetchedUpcomingEventData(events: [Event]) {
-        print("event from view \(events)")
+        events.forEach{event in
+            print("************************************")
+            print("ID: \(event.idEvent)")
+            print("Event Title: \(event.strEvent)")
+            print("Home: \(event.strHomeTeam)")
+            print("Guest: \(event.strAwayTeam)")
+            print("Time: \(event.strTime)")
+            print("Date: \(event.strDate)")
+            print("League ID: \(event.idLeague)")
+            print("Home ID: \(event.idHomeTeam)")
+            print("Guest ID: \(event.idAwayTeam)")
+            print("")
+        }
+    }
+
+    func fetchedLatestResultData(events: [Event]) {
+        events.forEach{event in
+            print("************************************")
+            print("ID: \(event.idEvent)")
+            print("Event Title: \(event.strEvent)")
+            print("Home: \(event.strHomeTeam)")
+            print("Guest: \(event.strAwayTeam)")
+            print("Time: \(event.strTime)")
+            print("Date: \(event.strDate)")
+            print("League ID: \(event.idLeague)")
+            print("Home ID: \(event.idHomeTeam)")
+            print("Guest ID: \(event.idAwayTeam)")
+            print("")
+        }
     }
     
-    func error(message: String) {
+    func fetchedTeamDetails(teams: [Team]) {
+        teams.forEach{team in
+            print("************************************")
+            print("ID: \(team.teamId)")
+            print("Team Title: \(team.teamName)")
+            print("Badge: \(team.teamBadge)")
+            print("Jerssey: \(team.teamJersey)")
+            print("")
+        }
+    }
+    
+    func error(result:Result,message: String) {
         print(message)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
