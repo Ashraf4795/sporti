@@ -87,7 +87,7 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
         let storyboard = UIStoryboard(name: "DetailsStoryboard",bundle:nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ss") as! LeugesViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "leugesId") as! LeugesViewController
         viewController.leaguesTitle = sports[indexPath.row].strSport
         present(viewController, animated: true, completion: nil)
         

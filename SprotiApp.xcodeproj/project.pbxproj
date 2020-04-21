@@ -28,6 +28,8 @@
 		DC0FA470244D44140035E48B /* LeagueDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */; };
 		DC0FA472244D45440035E48B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA471244D45440035E48B /* Event.swift */; };
 		DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */; };
+		DC5B1DA6244E659A00587F57 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA5244E659A00587F57 /* Team.swift */; };
+		DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA7244E7A7500587F57 /* Extracter.swift */; };
 		DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */; };
 		DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */; };
 		DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92D244B81D00070894E /* NetworkService.swift */; };
@@ -69,6 +71,8 @@
 		DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailDelegate.swift; sourceTree = "<group>"; };
 		DC0FA471244D45440035E48B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsPresenter.swift; sourceTree = "<group>"; };
+		DC5B1DA5244E659A00587F57 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		DC5B1DA7244E7A7500587F57 /* Extracter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracter.swift; sourceTree = "<group>"; };
 		DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92D244B81D00070894E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				DC5DE934244B826C0070894E /* sport.swift */,
 				DC9968E0244CF4860073EDF1 /* League.swift */,
 				DC0FA471244D45440035E48B /* Event.swift */,
+				DC5B1DA5244E659A00587F57 /* Team.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				DC5DE936244B829B0070894E /* Parser.swift */,
+				DC5B1DA7244E7A7500587F57 /* Extracter.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
 				CBF14EA3244BAADA00F14A4A /* TeamDetailsViewController.swift in Sources */,
+				DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */,
 				DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */,
 				CBF621D6244DBC6B004B4484 /* SportDelegate.swift in Sources */,
 				DC0FA472244D45440035E48B /* Event.swift in Sources */,
@@ -394,6 +401,7 @@
 				CBF621DB244DC7D8004B4484 /* SportCell.swift in Sources */,
 				DC5DE93C244B965B0070894E /* SportViewController.swift in Sources */,
 				DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */,
+				DC5B1DA6244E659A00587F57 /* Team.swift in Sources */,
 				DC0FA466244D063E0035E48B /* LeaguePresenter.swift in Sources */,
 				CBF62200244E708F004B4484 /* FavouriteLeugesDelegate.swift in Sources */,
 				DC5DE937244B829B0070894E /* Parser.swift in Sources */,

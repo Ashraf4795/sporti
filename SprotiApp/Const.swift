@@ -23,5 +23,11 @@ class Const {
     
     static let LATEST_RESULT:String = "https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id="
     
+    static let TEAMS_DETAILS = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id="
     /*Ashraf*/
+}
+
+enum Result {
+    case ERROR
+    case NO_DATA
 }

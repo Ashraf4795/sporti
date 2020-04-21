@@ -31,7 +31,8 @@ UITableViewDelegate, LeagueDelegate {
         let league = leagues[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "league") as! LeagueCell
         cell.title.text = league.strLeague
-        cell.logo.kf.setImage(with : URL(string: league.strBadge))
+        let badgeUrl = league.strBadge.appending("/preview")
+        cell.logo.kf.setImage(with : URL(string: badgeUrl))
         
         //add youtube gesture
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -49,7 +50,7 @@ UITableViewDelegate, LeagueDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return leagues.count
+        return leagues.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,7 +66,7 @@ UITableViewDelegate, LeagueDelegate {
         tableView.reloadData()
     }
     
-    func error(message: String) {
+    func error(result:Result ,message: String) {
         print("error")
     }
     
