@@ -33,7 +33,6 @@ class NetworkService : NetworkServiceProtocol{
     /*sara*/
     
     /*Ashraf*/
-    
     //fetch leagues data with sport title
     func fetchLeaguesData(strSport: String,delegate:LeagueDelegate) {
         var leagues:[League] = []
@@ -55,7 +54,6 @@ class NetworkService : NetworkServiceProtocol{
         }
     }
     
-    
     //fetch all upcoming event with league id
     func fetchUpcomingEvent(leagueId: Int, delegate: LeagueDetailDelegate,url:String) {
         var events:[Event] = []
@@ -66,6 +64,25 @@ class NetworkService : NetworkServiceProtocol{
                     let json = JSON(data)
                     events = Parser.parseUpcomingEvent(json: json)
                     delegate.fetchedUpcomingEventData(events: events)
+                }else {
+                    delegate.error(result:Result.NO_DATA,message: "No Data Fetched")
+                }
+            }else {
+                delegate.error(result: Result.ERROR, message: "Network Error")
+            }
+        }
+    }
+    
+    //fetch all Latest Result with league id
+    func fetchLatestResult(leagueId: Int, delegate: LeagueDetailDelegate,url:String) {
+        var events:[Event] = []
+        print("Latest Result URL: \(url+String(leagueId))")
+        Alamofire.request(url+String(leagueId)).responseJSON{(response) in
+            if response.result.isSuccess {
+                if let data = (response.data) {
+                    let json = JSON(data)
+                    events = Parser.parseLatestResult(json: json)
+                    delegate.fetchedLatestResultData(events: events)
                 }else {
                     delegate.error(result:Result.NO_DATA,message: "No Data Fetched")
                 }
@@ -92,6 +109,7 @@ class NetworkService : NetworkServiceProtocol{
             }
         }
     }
+    
     
     /*Ashraf*/
 }

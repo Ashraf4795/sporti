@@ -19,6 +19,8 @@ protocol NetworkServiceProtocol {
     func fetchLeaguesData(strSport:String,delegate:LeagueDelegate)
     //fetch all upcoming event with league id
     func fetchUpcomingEvent(leagueId:Int,delegate: LeagueDetailDelegate,url:String)
+    //fetch all latest Result event with league id
+    func fetchLatestResult(leagueId:Int,delegate: LeagueDetailDelegate,url:String)
     //fetch all teams in a league by league id
     func fetchTeamsInAleague(leagueId:Int,url:String,delegate:LeagueDetailDelegate)
     

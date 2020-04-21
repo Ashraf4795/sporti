@@ -19,4 +19,6 @@ struct Event {
     var idAwayTeam:Int
     var intHomeScore:Int
     var intAwayScore:Int
+    var homeBadge:String?
+    var guestBadge:String?
 }

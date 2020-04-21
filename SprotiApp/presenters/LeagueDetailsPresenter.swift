@@ -20,8 +20,12 @@ class LeagueDetailsPresenter {
         network.fetchUpcomingEvent(leagueId: _leagueId, delegate: leagueDetailDelegate,url:_url)
     }
     
-    func fetchTeamDetails(_leagueId:Int,_url:String,delegate:LeagueDetailDelegate) {
-        network.fetchTeamsInAleague(leagueId: _leagueId, url: _url, delegate: delegate)
+    func fetchLatestResult(_leagueId:Int,_url:String) {
+        network.fetchLatestResult(leagueId: _leagueId, delegate: leagueDetailDelegate,url:_url)
+    }
+    
+    func fetchTeamDetails(_leagueId:Int,_url:String) {
+        network.fetchTeamsInAleague(leagueId: _leagueId, url: _url, delegate: leagueDetailDelegate)
     }
 
     
