@@ -9,8 +9,9 @@
 import UIKit
 import Kingfisher
 
-class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate{
+class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
  
+    @IBOutlet weak var loadingProgress: UIActivityIndicatorView!
     
     @IBOutlet weak var sportCollectionView: UICollectionView!
     var sports:[Sport] = []
@@ -23,7 +24,10 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         let sportPresenter:SportPresenter = SportPresenter(sportDeleagtee:self)
         sportCollectionView.delegate = self
         sportCollectionView.dataSource = self
+        
     sportPresenter.fetchSport()
+  
+       
     }
     
 
@@ -51,11 +55,34 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
     }
     func fetchedSports(sports: [Sport]) {
         self.sports = sports
+        if (sports.count == 0 )
+        {
+            loadingProgress.startAnimating()
+        }
+        else
+        {
+            loadingProgress.stopAnimating()
+            loadingProgress.hidesWhenStopped = true
+        }
         sportCollectionView.reloadData()
     }
     
     func error(message: String) {
         
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let noOfCellsInRow = 2
+        
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+        
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+        
+        return CGSize(width: size, height: size)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
@@ -65,6 +92,10 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         present(viewController, animated: true, completion: nil)
         
     }
+ 
+  
    
    
 }
+
+

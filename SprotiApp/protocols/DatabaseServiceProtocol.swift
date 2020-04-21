@@ -12,15 +12,8 @@ protocol DatabaseServiceProtocol {
    
     /*sara*/
     
-    /*
-     g
-     h
-     j
-     u
-     y
-     t
-     o
-     */
+   func fetchAllFavouriteLeuges(delegate:FavouriteLeugesDelegate)
+    func insertFavouruteLeuge(delegate:FavouriteLeugesDelegate,  league:League)
     /*sara*/
     
     /*Ashraf*/
