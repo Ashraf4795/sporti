@@ -27,6 +27,8 @@
 		DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */; };
 		DC5B1DA6244E659A00587F57 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA5244E659A00587F57 /* Team.swift */; };
 		DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA7244E7A7500587F57 /* Extracter.swift */; };
+		DC5B1DAE244E908600587F57 /* UpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5B1DAC244E908600587F57 /* UpcomingCell.xib */; };
+		DC5B1DB1244EAC6400587F57 /* UpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DB0244EAC6400587F57 /* UpcomingCell.swift */; };
 		DC5DE929244B814C0070894E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */; };
 		DC5DE92B244B81720070894E /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */; };
 		DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE92D244B81D00070894E /* NetworkService.swift */; };
@@ -67,6 +69,8 @@
 		DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsPresenter.swift; sourceTree = "<group>"; };
 		DC5B1DA5244E659A00587F57 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		DC5B1DA7244E7A7500587F57 /* Extracter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracter.swift; sourceTree = "<group>"; };
+		DC5B1DAC244E908600587F57 /* UpcomingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCell.xib; sourceTree = "<group>"; };
+		DC5B1DB0244EAC6400587F57 /* UpcomingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingCell.swift; sourceTree = "<group>"; };
 		DC5DE928244B814C0070894E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92A244B81720070894E /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		DC5DE92D244B81D00070894E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		DC0FA467244D1CD50035E48B /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				DC5B1DAF244E909200587F57 /* Upcoming */,
 				CBF621D9244DC7A3004B4484 /* Sport */,
 				DC0FA46C244D1D1D0035E48B /* League */,
 			);
@@ -193,6 +198,15 @@
 				DC0FA469244D1D0E0035E48B /* LeagueCell.xib */,
 			);
 			path = League;
+			sourceTree = "<group>";
+		};
+		DC5B1DAF244E909200587F57 /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				DC5B1DB0244EAC6400587F57 /* UpcomingCell.swift */,
+				DC5B1DAC244E908600587F57 /* UpcomingCell.xib */,
+			);
+			path = Upcoming;
 			sourceTree = "<group>";
 		};
 		DC5DE925244B7F360070894E /* model */ = {
@@ -322,6 +336,7 @@
 				CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */,
 				DC0FA46B244D1D0E0035E48B /* LeagueCell.xib in Resources */,
 				CBF14E92244B470E00F14A4A /* Assets.xcassets in Resources */,
+				DC5B1DAE244E908600587F57 /* UpcomingCell.xib in Resources */,
 				DC5DE93E244B96EF0070894E /* DetailsStoryboard.storyboard in Resources */,
 				CBF14E8D244B470E00F14A4A /* Main.storyboard in Resources */,
 			);
@@ -384,6 +399,7 @@
 				DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */,
 				DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */,
 				CBF621D6244DBC6B004B4484 /* SportDelegate.swift in Sources */,
+				DC5B1DB1244EAC6400587F57 /* UpcomingCell.swift in Sources */,
 				DC0FA472244D45440035E48B /* Event.swift in Sources */,
 				DC0FA46E244D23E40035E48B /* LeagueCell.swift in Sources */,
 				CBF621D8244DC3E2004B4484 /* SportPresenter.swift in Sources */,

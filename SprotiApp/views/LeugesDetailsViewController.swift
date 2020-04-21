@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate{
+class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
     var upcomingEvents:[Event] = []
     var latestResult:[Event] = []
@@ -29,13 +31,33 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate{
         //all League Team
         leagueDetailsPresenter.fetchTeamDetails(_leagueId: leagueId, _url: Const.TEAMS_DETAILS)
         
+        //register upcoming cell
+        upcomingCollectionView.register(UINib(nibName: "UpcomingCell", bundle: nil), forCellWithReuseIdentifier: "upcomingCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if(collectionView == upcomingCollectionView) {
+            return upcomingEvents.count
+        }
+        return upcomingEvents.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let event = upcomingEvents[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
+        cell.homeName.text = event.strHomeTeam
+        cell.guestName.text = event.strAwayTeam
+        cell.date.text = event.strDate
+        cell.time.text = event.strTime
+        return cell
+    }
+    
     func fetchedUpcomingEventData(events: [Event]) {
         upcomingEvents = events
+        self.upcomingCollectionView.reloadData()
         print("**************** UPCOMING ********************")
         events.forEach{event in
             print("==========================")
