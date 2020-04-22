@@ -12,15 +12,22 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
+    @IBOutlet weak var latestCollectionView: UICollectionView!
+    @IBOutlet weak var noUpcomingImage: UIImageView!
+    
+    @IBOutlet weak var noLatestImage: UIImageView!
+    
+    
     var upcomingEvents:[Event] = []
     var latestResult:[Event] = []
     var teams:[Team] = []
-            
+    let placeHolderImage:String = ""
 
     var leagueId:Int = 123
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        attachDelegate()
         let leagueDetailsPresenter = LeagueDetailsPresenter(leagueDetailDelegate: self)
         //upcoming
         leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: leagueId, _url: Const.UPCOMING_EVENT)
@@ -33,6 +40,10 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         
         //register upcoming cell
         upcomingCollectionView.register(UINib(nibName: "UpcomingCell", bundle: nil), forCellWithReuseIdentifier: "upcomingCell")
+        
+        
+        //register latest cell
+        latestCollectionView.register(UINib(nibName: "LatestResultCell", bundle: nil), forCellWithReuseIdentifier: "latestCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,74 +52,88 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == upcomingCollectionView) {
             return upcomingEvents.count
+        }else if (collectionView == latestCollectionView) {
+            return latestResult.count
         }
-        return upcomingEvents.count
+        return teams.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let event = upcomingEvents[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
-        cell.homeName.text = event.strHomeTeam
-        cell.guestName.text = event.strAwayTeam
-        cell.date.text = event.strDate
-        cell.time.text = event.strTime
-        return cell
+        if (collectionView == upcomingCollectionView ){
+            let event = upcomingEvents[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
+            cell.homeName.text = event.strHomeTeam
+            cell.guestName.text = event.strAwayTeam
+            cell.date.text = event.strDate
+            cell.time.text = event.strTime
+            let homeBadgeUrl = URL(string: event.homeBadge ?? "" )
+            cell.homeBadge.kf.setImage(with:homeBadgeUrl)
+            let guestBadge = URL(string: event.guestBadge ?? "" )
+            cell.guestBadge.kf.setImage(with:guestBadge)
+            return cell
+        }else if (collectionView == latestCollectionView){
+            let event = latestResult[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "latestCell", for: indexPath) as! LatestResultCell
+            
+            let homeBadgeUrl = URL(string: event.homeBadge ?? "" )
+            cell.homeBadge.kf.setImage(with:homeBadgeUrl)
+            let guestBadge = URL(string: event.guestBadge ?? "" )
+            cell.guestBadge.kf.setImage(with:guestBadge)
+            cell.homeScore.text = String(event.intHomeScore)
+            cell.guestScore.text = String(event.intAwayScore)
+            cell.homeName.text = event.strHomeTeam
+            cell.guestName.text = event.strAwayTeam
+            return cell
+        }else {
+           return UICollectionViewCell()
+        }
     }
     
     func fetchedUpcomingEventData(events: [Event]) {
         upcomingEvents = events
-        self.upcomingCollectionView.reloadData()
-        print("**************** UPCOMING ********************")
-        events.forEach{event in
-            print("==========================")
-            print("ID: \(event.idEvent)")
-            print("Event Title: \(event.strEvent)")
-            print("Home: \(event.strHomeTeam)")
-            print("Guest: \(event.strAwayTeam)")
-            print("Time: \(event.strTime)")
-            print("Date: \(event.strDate)")
-            print("League ID: \(event.idLeague)")
-            print("Home ID: \(event.idHomeTeam)")
-            print("Guest ID: \(event.idAwayTeam)")
-            print("")
+        if events.count>0{
+            self.upcomingCollectionView.reloadData()
+        }else {
+            noUpcomingImage.isHidden = false
         }
     }
 
     func fetchedLatestResultData(events: [Event]) {
         latestResult = events
-        print("**************** Latest Result ********************")
-        events.forEach{event in
-            print("==========================")
-            print("ID: \(event.idEvent)")
-            print("Event Title: \(event.strEvent)")
-            print("Home: \(event.strHomeTeam)")
-            print("Guest: \(event.strAwayTeam)")
-            print("Home Score: \(event.intHomeScore)")
-            print("Guest Score: \(event.intAwayScore)")
-            print("Time: \(event.strTime)")
-            print("Date: \(event.strDate)")
-            print("League ID: \(event.idLeague)")
-            print("Home ID: \(event.idHomeTeam)")
-            print("Guest ID: \(event.idAwayTeam)")
-            print("")
+        if(events.count>0){
+        latestCollectionView.reloadData()
+        }else {
+            noLatestImage.isHidden = false
         }
     }
     
     func fetchedTeamDetails(teams: [Team]) {
         self.teams = teams
-        print("**************** Teams Details ********************")
-        teams.forEach{team in
-            print("==========================")
-            print("ID: \(team.teamId)")
-            print("Team Title: \(team.teamName)")
-            print("Badge: \(team.teamBadge)")
-            print("Jerssey: \(team.teamJersey)")
-            print("")
-        }
+        upcomingEvents = Extracter.getTeamsBadges2(events: upcomingEvents, teams: teams)
+        latestResult = Extracter.getTeamsBadges2(events: latestResult, teams: teams)
+        upcomingCollectionView.reloadData()
+        
+        latestCollectionView.reloadData()
     }
     
     func error(result:Result,message: String) {
         print(message)
     }
 
+    
+    
+    //attach collectionViews to leaguesDetailsView delegate
+    func attachDelegate (){
+        //upcoming
+        upcomingCollectionView.dataSource = self
+        upcomingCollectionView.delegate = self
+        
+        //latest
+        latestCollectionView.dataSource = self
+        latestCollectionView.delegate = self
+        
+        //teams
+        
+        
+    }
 }

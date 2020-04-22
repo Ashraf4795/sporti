@@ -17,7 +17,8 @@ class Extracter {
             teams.forEach{ team in
                 if team.teamId == event.idHomeTeam {
                     idBadgeMap[team.teamId] = (team.teamBadge,team.teamJersey)
-                } else if team.teamId == event.idAwayTeam {
+                }
+                if team.teamId == event.idAwayTeam {
                     idBadgeMap[team.teamId] = (team.teamBadge,team.teamJersey)
                 }
             }
@@ -31,14 +32,15 @@ class Extracter {
             
             teams.forEach{ team in
                 if team.teamId == event.idHomeTeam {
-                    tempEvent.homeBadge = team.teamBadge
+                    tempEvent.homeBadge = team.teamBadge.appending("/preview")
                 }
                 if team.teamId == event.idAwayTeam {
-                    tempEvent.guestBadge = team.teamBadge
+                    tempEvent.guestBadge = team.teamBadge.appending("/preview")
                 }
-                eventsWithBadge.append(tempEvent)
             }
+            eventsWithBadge.append(tempEvent)
         }
+        print("events with badges : \(eventsWithBadge)")
         return eventsWithBadge
     }
 }
