@@ -58,6 +58,7 @@ UITableViewDelegate, LeagueDelegate {
         guard let newViewController = storyBoard.instantiateViewController(withIdentifier: "leagueDetails") as? LeugesDetailsViewController else {
             return
         }
+        newViewController.modalPresentationStyle = .fullScreen
         newViewController.leagueId = leagues[indexPath.row].leagueId
                 self.present(newViewController, animated: true, completion: nil)
     }

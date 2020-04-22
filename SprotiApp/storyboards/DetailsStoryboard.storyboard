@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYa-Pi-ObI">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -14,18 +14,27 @@
             <objects>
                 <viewController storyboardIdentifier="leagueDetails" id="JCA-b3-1Zx" customClass="LeugesDetailsViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqa-Zt-x9B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-KV-N2x">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="League Details" id="qLw-fL-BDn">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="Kze-JY-ago"/>
+                                        <barButtonItem key="leftBarButtonItem" title="back" image="chevron.left" catalog="system" style="plain" id="DSW-y8-gkd">
+                                            <connections>
+                                                <action selector="back:" destination="JCA-b3-1Zx" id="DxG-2o-f11"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="Kze-JY-ago">
+                                            <connections>
+                                                <action selector="addToFav:" destination="JCA-b3-1Zx" id="8g1-cH-BiH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kGl-p5-bVG">
-                                <rect key="frame" x="8" y="125" width="398.5" height="200"/>
+                                <rect key="frame" x="8" y="81" width="359.5" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="HEA-jF-WgD"/>
                                 </constraints>
@@ -37,7 +46,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_results_found" id="U7R-QU-7a2">
-                                    <rect key="frame" x="0.0" y="0.0" width="398.5" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="359.5" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -56,28 +65,28 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-Fc-PKA">
-                                <rect key="frame" x="8" y="96" width="130" height="21"/>
+                                <rect key="frame" x="8" y="52" width="91" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-hb-lHK">
-                                <rect key="frame" x="8" y="332" width="108" height="21"/>
+                                <rect key="frame" x="8" y="288" width="69" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2L-En-GXG">
-                                <rect key="frame" x="8" y="370" width="398" height="589"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2L-En-GXG">
+                                <rect key="frame" x="8" y="326" width="359" height="0.0"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxg-Ub-pLk">
-                                        <rect key="frame" x="0.0" y="182" width="121" height="21"/>
+                                        <rect key="frame" x="0.0" y="182" width="82" height="21"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ugm-JG-Fad">
-                                        <rect key="frame" x="0.0" y="16" width="406" height="150"/>
+                                        <rect key="frame" x="0.0" y="16" width="367" height="150"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="pIv-0k-SdW"/>
@@ -89,7 +98,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <imageView key="backgroundView" hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_results_found" id="dc3-3G-hO6">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <cells>
@@ -107,20 +116,20 @@
                                             <outlet property="delegate" destination="JCA-b3-1Zx" id="wYZ-la-CQY"/>
                                         </connections>
                                     </collectionView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gmc-h6-rAU">
-                                        <rect key="frame" x="0.0" y="211" width="414" height="174"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gmc-h6-rAU">
+                                        <rect key="frame" x="0.0" y="211" width="375" height="230"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="174" id="gNH-be-uhc"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFT-HC-wTK">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFT-HC-wTK">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zof-EC-13w">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zof-EC-13w" customClass="teamCell" customModule="SprotiApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uMw-Qe-6vQ">
@@ -129,6 +138,10 @@
                                                 </collectionViewCellContentView>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JCA-b3-1Zx" id="q2a-X6-3rW"/>
+                                            <outlet property="delegate" destination="JCA-b3-1Zx" id="DbD-ac-Ijw"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,7 +150,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Gmc-h6-rAU" secondAttribute="trailing" id="BU2-oa-uNc"/>
                                     <constraint firstItem="Gmc-h6-rAU" firstAttribute="centerX" secondItem="j2L-En-GXG" secondAttribute="centerX" id="GCE-5P-cKP"/>
                                     <constraint firstItem="Xxg-Ub-pLk" firstAttribute="leading" secondItem="j2L-En-GXG" secondAttribute="leading" id="KW5-vd-mNL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gmc-h6-rAU" secondAttribute="bottom" constant="16" id="Lci-vX-bgR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gmc-h6-rAU" secondAttribute="bottom" constant="40" id="Lci-vX-bgR"/>
                                     <constraint firstAttribute="trailing" secondItem="Xxg-Ub-pLk" secondAttribute="trailing" constant="293" id="PMw-Ba-lYn"/>
                                     <constraint firstAttribute="trailing" secondItem="Ugm-JG-Fad" secondAttribute="trailing" constant="8" id="ZGQ-pf-sff"/>
                                     <constraint firstItem="Xxg-Ub-pLk" firstAttribute="top" secondItem="Ugm-JG-Fad" secondAttribute="bottom" constant="16" id="d7c-9m-avi"/>
@@ -175,6 +188,7 @@
                         <outlet property="latestCollectionView" destination="Ugm-JG-Fad" id="Pfg-7a-sCa"/>
                         <outlet property="noLatestImage" destination="dc3-3G-hO6" id="iXI-kg-5Vl"/>
                         <outlet property="noUpcomingImage" destination="U7R-QU-7a2" id="HaM-AU-UCn"/>
+                        <outlet property="teamCollectionView" destination="Gmc-h6-rAU" id="edo-eG-IRv"/>
                         <outlet property="upcomingCollectionView" destination="kGl-p5-bVG" id="9HN-1h-k6N"/>
                     </connections>
                 </viewController>
@@ -187,7 +201,7 @@
             <objects>
                 <viewController id="lXR-R5-s5Q" customClass="TeamDetailsViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3A5-jz-Wrc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-4y-4J4">
@@ -213,7 +227,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fla-en-OuO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dOs-36-5eD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -230,11 +244,11 @@
             <objects>
                 <viewController storyboardIdentifier="leugesId" id="nYa-Pi-ObI" customClass="LeugesViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSu-GL-DAj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yKb-YG-cHJ" customClass="Leag">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nYa-Pi-ObI" id="3nf-1d-IrG"/>
@@ -262,6 +276,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="no_results_found" width="800" height="600"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>

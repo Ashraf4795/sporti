@@ -13,11 +13,22 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
     @IBOutlet weak var latestCollectionView: UICollectionView!
+    
+    @IBOutlet weak var teamCollectionView: UICollectionView!
+    
     @IBOutlet weak var noUpcomingImage: UIImageView!
     
     @IBOutlet weak var noLatestImage: UIImageView!
     
     
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        //check if addToFav icon is checked or not
+        // if true , add this league to favourit db
+    }
+    
+    @IBAction func addToFav(_ sender: Any) {
+    }
     var upcomingEvents:[Event] = []
     var latestResult:[Event] = []
     var teams:[Team] = []
@@ -44,6 +55,10 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         
         //register latest cell
         latestCollectionView.register(UINib(nibName: "LatestResultCell", bundle: nil), forCellWithReuseIdentifier: "latestCell")
+        
+        
+        //register team cell
+        teamCollectionView.register(UINib(nibName: "teamCell", bundle: nil), forCellWithReuseIdentifier: "teamCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,7 +100,13 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
             cell.guestName.text = event.strAwayTeam
             return cell
         }else {
-           return UICollectionViewCell()
+            let team = teams[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCell", for: indexPath) as! teamCell
+            let teamBadgeUrl = URL(string:team.teamBadge.appending("/preview"))
+            
+            cell.teamBadge.kf.setImage(with: teamBadgeUrl, placeholder: UIImage(named: "placeHolder-1"))
+            
+            return cell
         }
     }
     
@@ -114,6 +135,7 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         upcomingCollectionView.reloadData()
         
         latestCollectionView.reloadData()
+        teamCollectionView.reloadData()
     }
     
     func error(result:Result,message: String) {
@@ -134,6 +156,7 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         
         //teams
         
-        
+        teamCollectionView.dataSource = self
+        teamCollectionView.delegate = self
     }
 }

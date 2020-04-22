@@ -45,6 +45,8 @@
 		DC5DE942244B97650070894E /* LeugesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DE941244B97650070894E /* LeugesDetailsViewController.swift */; };
 		DC8AA7E5244FD126002F8D78 /* LatestResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AA7E3244FD126002F8D78 /* LatestResultCell.swift */; };
 		DC8AA7E6244FD126002F8D78 /* LatestResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8AA7E4244FD126002F8D78 /* LatestResultCell.xib */; };
+		DC8AA7EB24500E4B002F8D78 /* teamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8AA7E924500E4B002F8D78 /* teamCell.xib */; };
+		DC8AA7ED24500F7E002F8D78 /* teamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8AA7EC24500F7D002F8D78 /* teamCell.swift */; };
 		DC9968E1244CF4860073EDF1 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E0244CF4860073EDF1 /* League.swift */; };
 		DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E2244CF5DB0073EDF1 /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		DC5DE941244B97650070894E /* LeugesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeugesDetailsViewController.swift; sourceTree = "<group>"; };
 		DC8AA7E3244FD126002F8D78 /* LatestResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCell.swift; sourceTree = "<group>"; };
 		DC8AA7E4244FD126002F8D78 /* LatestResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestResultCell.xib; sourceTree = "<group>"; };
+		DC8AA7E924500E4B002F8D78 /* teamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamCell.xib; sourceTree = "<group>"; };
+		DC8AA7EC24500F7D002F8D78 /* teamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamCell.swift; sourceTree = "<group>"; };
 		DC9968E0244CF4860073EDF1 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		DC9968E2244CF5DB0073EDF1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +201,7 @@
 		DC0FA467244D1CD50035E48B /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				DC8AA7E724500E2F002F8D78 /* team */,
 				DC53F7FD244FBA6A00245893 /* Latest */,
 				DC5B1DAF244E909200587F57 /* Upcoming */,
 				CBF621D9244DC7A3004B4484 /* Sport */,
@@ -294,6 +299,15 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		DC8AA7E724500E2F002F8D78 /* team */ = {
+			isa = PBXGroup;
+			children = (
+				DC8AA7EC24500F7D002F8D78 /* teamCell.swift */,
+				DC8AA7E924500E4B002F8D78 /* teamCell.xib */,
+			);
+			path = team;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +371,7 @@
 			files = (
 				CB95CC51244CA18E00355DC3 /* Podfile in Resources */,
 				CBF62206244E8D23004B4484 /* empty.png in Resources */,
+				DC8AA7EB24500E4B002F8D78 /* teamCell.xib in Resources */,
 				DC8AA7E6244FD126002F8D78 /* LatestResultCell.xib in Resources */,
 				CBF14E95244B470E00F14A4A /* LaunchScreen.storyboard in Resources */,
 				DC0FA46B244D1D0E0035E48B /* LeagueCell.xib in Resources */,
@@ -438,6 +453,7 @@
 				CBF62200244E708F004B4484 /* FavouriteLeugesDelegate.swift in Sources */,
 				DC5DE937244B829B0070894E /* Parser.swift in Sources */,
 				DC5DE942244B97650070894E /* LeugesDetailsViewController.swift in Sources */,
+				DC8AA7ED24500F7E002F8D78 /* teamCell.swift in Sources */,
 				DC5DE92E244B81D00070894E /* NetworkService.swift in Sources */,
 				DC5DE940244B97290070894E /* LeugesViewController.swift in Sources */,
 				DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */,
