@@ -12,8 +12,11 @@ import Kingfisher
 class LeugesViewController: UIViewController ,UITableViewDataSource,
 UITableViewDelegate, LeagueDelegate {
     
+    let youtubeLogo = UIImage(named:"youtube")
+    
     var leagues:[League] = []
     var leaguesTitle:String = "Soccer"
+    var selectedLegue:League?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -30,6 +33,12 @@ UITableViewDelegate, LeagueDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let league = leagues[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "league") as! LeagueCell
+        
+        if (!league.strYoutube.isEmpty){
+            cell.youtubeLogo.image = self.youtubeLogo
+        }else{
+            cell.youtubeLogo.isHidden = true
+        }
         cell.title.text = league.strLeague
         let badgeUrl = league.strBadge.appending("/preview")
         cell.logo.kf.setImage(with : URL(string: badgeUrl))
@@ -54,13 +63,9 @@ UITableViewDelegate, LeagueDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "DetailsStoryboard", bundle: nil)
-        guard let newViewController = storyBoard.instantiateViewController(withIdentifier: "leagueDetails") as? LeugesDetailsViewController else {
-            return
-        }
-        newViewController.modalPresentationStyle = .fullScreen
-        newViewController.leagueId = leagues[indexPath.row].leagueId
-                self.present(newViewController, animated: true, completion: nil)
+        
+        selectedLegue = leagues[indexPath.row]
+        performSegue(withIdentifier: "goToDetails", sender: self)
     }
     func fetchedLeaguesData(leagues: [League]) {
         self.leagues = leagues
@@ -74,26 +79,27 @@ UITableViewDelegate, LeagueDelegate {
     
     //youtube tapping callback
     @objc func imageTapped (tapGestureRecognizer: UITapGestureRecognizer){
+       
         let imgView = tapGestureRecognizer.view as! UIImageView
-        if(leagues[imgView.tag].strYoutube != ""){
-           
+        if(!leagues[imgView.tag].strYoutube.isEmpty){
+            print("have youtube")
+            Notify.playInYoutube(youtubeVideoUrl: leagues[imgView.tag].strYoutube)
         }else{
+            print(leagues[imgView.tag].strYoutube)
             print("no youtube url")
             //show alart dialog
+            Notify.showAlert(viewController: self, _title: "No Video Found", _message: "This video no avalible at this time")
         }
         
         
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let detailsVC = segue.destination as! LeugesDetailsViewController
+        detailsVC.selectedLeague = self.selectedLegue
+        detailsVC.modalPresentationStyle = .fullScreen
     }
-    */
-
+    
+    
+    
 }

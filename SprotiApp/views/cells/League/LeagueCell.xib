@@ -25,28 +25,28 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="England Leagues is Awsome" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4Sw-W1-hQg">
-                        <rect key="frame" x="80" y="44" width="324" height="26.5"/>
+                        <rect key="frame" x="80" y="44" width="228.5" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-fw-Ste">
-                        <rect key="frame" x="420" y="33" width="50" height="50"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-fw-Ste">
+                        <rect key="frame" x="436" y="44" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="55E-cJ-LLg"/>
-                            <constraint firstAttribute="width" constant="50" id="HII-C9-ytF"/>
+                            <constraint firstAttribute="width" constant="30" id="OpG-IW-4P6"/>
+                            <constraint firstAttribute="height" constant="30" id="Smr-U8-h42"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4Sw-W1-hQg" firstAttribute="leading" secondItem="7by-p4-UoS" secondAttribute="trailing" constant="10" id="11E-0H-36B"/>
+                    <constraint firstAttribute="bottom" secondItem="kt9-fw-Ste" secondAttribute="bottom" constant="34" id="1Qj-9g-EYf"/>
                     <constraint firstItem="7by-p4-UoS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="1zv-mx-taH"/>
+                    <constraint firstItem="kt9-fw-Ste" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="5oB-yR-I4h"/>
+                    <constraint firstAttribute="trailing" secondItem="kt9-fw-Ste" secondAttribute="trailing" constant="20" id="KMV-Am-eIZ"/>
                     <constraint firstItem="7by-p4-UoS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KVh-P3-2pW"/>
                     <constraint firstAttribute="bottom" secondItem="7by-p4-UoS" secondAttribute="bottom" constant="23" id="R6a-qE-ihT"/>
-                    <constraint firstAttribute="trailing" secondItem="kt9-fw-Ste" secondAttribute="trailing" constant="16" id="WgW-iQ-q6m"/>
-                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="16" id="ZbM-Kb-4gO"/>
-                    <constraint firstItem="kt9-fw-Ste" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="bVa-EZ-U8U"/>
-                    <constraint firstAttribute="bottom" secondItem="kt9-fw-Ste" secondAttribute="bottom" constant="25" id="g7n-0n-vFC"/>
+                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="127.5" id="alc-b0-h38"/>
                     <constraint firstAttribute="bottom" secondItem="4Sw-W1-hQg" secondAttribute="bottom" constant="37.5" id="mfX-VI-QKf"/>
                     <constraint firstItem="4Sw-W1-hQg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="xLm-y6-nqr"/>
                 </constraints>
@@ -60,7 +60,4 @@
             <point key="canvasLocation" x="-226.08695652173915" y="-23.4375"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="youtube" width="128" height="90"/>
-    </resources>
 </document>

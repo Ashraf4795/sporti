@@ -9,11 +9,12 @@
 import UIKit
 
 class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UITableViewDelegate,UITableViewDataSource {
+    let youtubeLogo = UIImage(named:"youtube")
     
     @IBOutlet weak var emptyState: UIView!
     @IBOutlet weak var emptyImageView: UIImageView!
-    
-    
+    //global var to see it in viewWillAppeare
+    var favouriteLeaguePresenter:FavouriteLeugePresenter?
     var leagues:[League] = []
 
     @IBOutlet weak var favouriteLeugeTableView: UITableView!
@@ -21,16 +22,17 @@ class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let favouriteLeaguePresenter:FavouriteLeugePresenter = FavouriteLeugePresenter(favouriteLeugeDelegate: self)
+          favouriteLeaguePresenter = FavouriteLeugePresenter(favouriteLeugeDelegate: self)
         favouriteLeugeTableView.delegate = self
         favouriteLeugeTableView.dataSource = self
-        favouriteLeugeTableView.register(UINib(nibName: "LeagueCell", bundle: nil), forCellReuseIdentifier: "cell")
+        favouriteLeugeTableView.register(UINib(nibName: "LeagueCell", bundle: nil), forCellReuseIdentifier: "league")
         
-        favouriteLeaguePresenter.fetchFavouriteLeuges()
         emptyImageView.image = UIImage(named : "empty.png")
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        favouriteLeaguePresenter?.fetchFavouriteLeuges()
+    }
     /*
     // MARK: - Navigation
 
@@ -51,6 +53,8 @@ class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UIT
         {
             emptyState.isHidden = true
             favouriteLeugeTableView.isHidden = false
+            //reload fetched data
+            favouriteLeugeTableView.reloadData()
         }
     }
     
@@ -63,7 +67,12 @@ class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let league = leagues[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeagueCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "league") as! LeagueCell
+        if (!league.strYoutube.isEmpty){
+            cell.youtubeLogo.image = self.youtubeLogo
+        }else{
+            cell.youtubeLogo.isHidden = true
+        }
         cell.title.text = league.strLeague
         cell.logo.kf.setImage(with : URL(string: league.strBadge))
         
@@ -79,11 +88,14 @@ class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UIT
     }
     @objc func imageTapped (tapGestureRecognizer: UITapGestureRecognizer){
         let imgView = tapGestureRecognizer.view as! UIImageView
-        if(leagues[imgView.tag].strYoutube != ""){
-            
+        if(!leagues[imgView.tag].strYoutube.isEmpty){
+            print("have youtube")
+            Notify.playInYoutube(youtubeVideoUrl: leagues[imgView.tag].strYoutube)
         }else{
+            print(leagues[imgView.tag].strYoutube)
             print("no youtube url")
             //show alart dialog
+            Notify.showAlert(viewController: self, _title: "No Video Found", _message: "This video no avalible at this time")
         }
         
         

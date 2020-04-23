@@ -28,6 +28,7 @@
 		DC0FA470244D44140035E48B /* LeagueDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */; };
 		DC0FA472244D45440035E48B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA471244D45440035E48B /* Event.swift */; };
 		DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */; };
+		DC54226D24513F550015C0B8 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54226C24513F550015C0B8 /* Notify.swift */; };
 		DC5B1DA6244E659A00587F57 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA5244E659A00587F57 /* Team.swift */; };
 		DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA7244E7A7500587F57 /* Extracter.swift */; };
 		DC5B1DAE244E908600587F57 /* UpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5B1DAC244E908600587F57 /* UpcomingCell.xib */; };
@@ -77,6 +78,7 @@
 		DC0FA46F244D44140035E48B /* LeagueDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailDelegate.swift; sourceTree = "<group>"; };
 		DC0FA471244D45440035E48B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsPresenter.swift; sourceTree = "<group>"; };
+		DC54226C24513F550015C0B8 /* Notify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		DC5B1DA5244E659A00587F57 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		DC5B1DA7244E7A7500587F57 /* Extracter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracter.swift; sourceTree = "<group>"; };
 		DC5B1DAC244E908600587F57 /* UpcomingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCell.xib; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				DC5DE936244B829B0070894E /* Parser.swift */,
 				DC5B1DA7244E7A7500587F57 /* Extracter.swift */,
+				DC54226C24513F550015C0B8 /* Notify.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC54226D24513F550015C0B8 /* Notify.swift in Sources */,
 				DC9968E1244CF4860073EDF1 /* League.swift in Sources */,
 				CBF14E90244B470E00F14A4A /* SprotiApp.xcdatamodeld in Sources */,
 				DC5DE930244B81EA0070894E /* DatabaseService.swift in Sources */,
