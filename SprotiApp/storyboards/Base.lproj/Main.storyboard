@@ -202,7 +202,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="NTI-PK-BRz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CdV-TY-x8l" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CdV-TY-x8l" customClass="TabBarController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nVJ-CA-mQi">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

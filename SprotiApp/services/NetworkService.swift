@@ -30,6 +30,21 @@ class NetworkService : NetworkServiceProtocol{
             }
         }
     }
+    //
+    func fetchTeamDetails(idTeam :Int,delegate: TeamDetailsDelegate) {
+        var teamdetails:TeamDetail = TeamDetail()
+        Alamofire.request(Const.TEAM_DETAILSS+"\(idTeam)").responseJSON{(response) in
+            if let data = (response.data) {
+                let json = JSON(data)
+                //   print(json)
+                teamdetails = Parser.parseTeamDetails(json: json)
+                delegate.fetchedTeamDetails(teamDetails: teamdetails)
+                // print("\(teamdetails.strDescriptionEN) hijiokouio")
+            }else {
+                delegate.error(message: "no team details fetched")
+            }
+        }
+    }
     /*sara*/
     
     /*Ashraf*/

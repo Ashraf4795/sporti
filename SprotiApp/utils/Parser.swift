@@ -11,6 +11,26 @@ import SwiftyJSON
 class Parser {
     
     /*sara*/
+    static func parseTeamDetails(json:JSON) -> TeamDetail
+    {
+        
+        var teamDetails :TeamDetail = TeamDetail()
+        for team in json["teams"].arrayValue
+        {
+            teamDetails.idTeam = team["idTeam"].intValue
+            teamDetails.intFormedYear = team["intFormedYear"].intValue
+            teamDetails.strDescriptionEN = team["strDescriptionEN"].stringValue
+            teamDetails.strFacebook = team["strFacebook"].stringValue
+            teamDetails.strInstagram = team["strInstagram"].stringValue
+            teamDetails.strTeam = team["strTeam"].stringValue
+            teamDetails.strTeamBadge = team["strTeamBadge"].stringValue
+            teamDetails.strTwitter = team["strTwitter"].stringValue
+            teamDetails.strWebsite = team["strWebsite"].stringValue
+            
+        }
+        return teamDetails
+        
+    }
     /*sara*/
     
     
