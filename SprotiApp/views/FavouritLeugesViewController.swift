@@ -103,7 +103,8 @@ class FavouritLeugesViewController: UIViewController,FavouriteLeugesDelegate,UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "DetailsStoryboard",bundle:nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "leagueDetails") as! LeugesDetailsViewController
-        viewController.leagueId = leagues[indexPath.row].leagueId
+        viewController.selectedLeague = leagues[indexPath.row]
+        viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true, completion: nil)
     }
     

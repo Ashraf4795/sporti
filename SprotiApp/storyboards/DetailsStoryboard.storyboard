@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-KV-N2x">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="League Details" id="qLw-fL-BDn">
                                         <barButtonItem key="leftBarButtonItem" title="back" image="chevron.left" catalog="system" style="plain" id="DSW-y8-gkd">
@@ -26,17 +26,20 @@
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="star" catalog="system" style="plain" id="kkb-ij-Is7">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O3r-2M-td5">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O3r-2M-td5">
+                                                <rect key="frame" x="337" y="17" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="star" catalog="system"/>
+                                                <connections>
+                                                    <action selector="addToFavClick:" destination="JCA-b3-1Zx" eventType="touchUpInside" id="D9V-VM-mTg"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kGl-p5-bVG">
-                                <rect key="frame" x="8" y="125" width="359.5" height="200"/>
+                                <rect key="frame" x="8" y="93" width="359.5" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="HEA-jF-WgD"/>
                                 </constraints>
@@ -67,13 +70,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-Fc-PKA">
-                                <rect key="frame" x="8" y="96" width="91" height="21"/>
+                                <rect key="frame" x="8" y="64" width="91" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-hb-lHK">
-                                <rect key="frame" x="8" y="332" width="69" height="21"/>
+                                <rect key="frame" x="8" y="300" width="69" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -187,6 +190,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tTw-j9-85M"/>
                     <connections>
+                        <outlet property="addToFav" destination="O3r-2M-td5" id="1dh-e3-nkD"/>
                         <outlet property="latestCollectionView" destination="Ugm-JG-Fad" id="Pfg-7a-sCa"/>
                         <outlet property="navBar" destination="Wa5-KV-N2x" id="eis-lR-3FM"/>
                         <outlet property="noLatestImage" destination="dc3-3G-hO6" id="iXI-kg-5Vl"/>
@@ -242,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="1.3392857142857142"/>
         </scene>
-        <!--Leuges View Controller-->
+        <!--Title-->
         <scene sceneID="Ka9-Jb-bbE">
             <objects>
                 <viewController storyboardIdentifier="leugesId" id="nYa-Pi-ObI" customClass="LeugesViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,10 +272,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CbA-ep-XTI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0ii-La-5KD"/>
+                    <navigationItem key="navigationItem" title="Title" id="DRZ-sg-yj2">
+                        <barButtonItem key="backBarButtonItem" title="back" id="o61-f9-eer"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yKb-YG-cHJ" id="Mbf-zr-JmU"/>
-                        <segue destination="JCA-b3-1Zx" kind="show" identifier="goToDetails" id="dBt-sW-xkm"/>
+                        <segue destination="JCA-b3-1Zx" kind="showDetail" identifier="goToDetails" id="dBt-sW-xkm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvc-O1-Hr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

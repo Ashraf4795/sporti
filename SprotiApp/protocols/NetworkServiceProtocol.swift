@@ -12,6 +12,8 @@ protocol NetworkServiceProtocol {
    /*sara*/
     //fetch all sports
     func fetchSports(delegate:SportDelegate)
+    //fetch all team details
+    func fetchTeamDetails(idTeam : Int,delegate:TeamDetailsDelegate)
     /*sara*/
     
     /*Ashraf*/

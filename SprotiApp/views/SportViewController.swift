@@ -26,7 +26,12 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         sportCollectionView.dataSource = self
         
     sportPresenter.fetchSport()
-  
+        let numberOfCell = 2
+        let cellSpacing = 10
+        if let layout = sportCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        {
+            layout.itemSize = CGSize(width :(Int(view.frame.width) - (cellSpacing * (numberOfCell+1)))/numberOfCell , height :155 )
+        }
        
     }
     
@@ -89,7 +94,8 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         let storyboard = UIStoryboard(name: "DetailsStoryboard",bundle:nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "leugesId") as! LeugesViewController
         viewController.leaguesTitle = sports[indexPath.row].strSport
-        present(viewController, animated: true, completion: nil)
+        viewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
  

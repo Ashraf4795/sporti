@@ -12,11 +12,13 @@ protocol DatabaseServiceProtocol {
    
     /*sara*/
     
-   func fetchAllFavouriteLeuges(delegate:FavouriteLeugesDelegate)
+    func fetchAllFavouriteLeuges(delegate:FavouriteLeugesDelegate)
     func insertFavouruteLeuge(delegate:FavouriteLeugesDelegate,  league:League)
     /*sara*/
     
     /*Ashraf*/
+    func isLeagueInFavourite (leagueId:Int)->Bool
+    func deleteFromFavourite(delegate:LeagueDetailDelegate, leagueId:Int)
     /*Ashraf*/
      
 }

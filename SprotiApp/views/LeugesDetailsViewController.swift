@@ -12,7 +12,7 @@ import UIKit
 class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UICollectionViewDataSource,UICollectionViewDelegate , FavouriteLeugesDelegate{
     let fillIcon = UIImage(named: "star.fill")
     let notFillIcon = UIImage(named:"star")
-
+    
     //is this league in favouirt
     var isFavourit:Bool = false
     //instance of db
@@ -20,7 +20,20 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     @IBOutlet weak var navBar: UINavigationBar!
     
-    @IBOutlet weak var addFavIcon: UIBarButtonItem!
+
+    @IBOutlet weak var addToFav: UIButton!
+    
+    @IBAction func addToFavClick(_ sender: Any) {
+        print("clicked")
+        isFavourit = !isFavourit
+        if isFavourit && addToFav.imageView?.image != fillIcon{
+            addToFav.setImage(fillIcon, for: .normal)
+            db.insertFavouruteLeuge(delegate: self, league: selectedLeague!)
+        }else {
+            addToFav.setImage(notFillIcon, for: .normal)
+        }
+    }
+    
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
@@ -34,9 +47,13 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     
     @IBAction func back(_ sender: Any) {
+        if !isFavourit {
+            db.deleteFromFavourite(delegate: self, leagueId: selectedLeague!.leagueId)
+        }
         self.dismiss(animated: true, completion: nil)
         //TODO:check if addToFav icon is checked or not
         // if true , add this league to favourit db
+        
     }
     
    
@@ -54,16 +71,17 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         attachDelegate()
         
         //TODO:check if this leagues is in favourit database or not
+        isFavourit = db.isLeagueInFavourite(leagueId: selectedLeague!.leagueId)
         
         let leagueDetailsPresenter = LeagueDetailsPresenter(leagueDetailDelegate: self)
         //upcoming
-        leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: leagueId, _url: Const.UPCOMING_EVENT)
+        leagueDetailsPresenter.fetchUpcomingEvent(_leagueId: selectedLeague!.leagueId, _url: Const.UPCOMING_EVENT)
         
         //latest Result
-        leagueDetailsPresenter.fetchLatestResult(_leagueId: leagueId, _url: Const.LATEST_RESULT)
+        leagueDetailsPresenter.fetchLatestResult(_leagueId: selectedLeague!.leagueId, _url: Const.LATEST_RESULT)
         
         //all League Team
-        leagueDetailsPresenter.fetchTeamDetails(_leagueId: leagueId, _url: Const.TEAMS_DETAILS)
+        leagueDetailsPresenter.fetchTeamDetails(_leagueId: selectedLeague!.leagueId, _url: Const.TEAMS_DETAILS)
         
         //register upcoming cell
         upcomingCollectionView.register(UINib(nibName: "UpcomingCell", bundle: nil), forCellWithReuseIdentifier: "upcomingCell")
@@ -80,7 +98,7 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         navBar.topItem?.title = selectedLeague?.strLeague
-        //TODO:if this leagues is in favourit db, enable fav bar btn
+        setUpFavicon(isFavourite: isFavourit)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -186,6 +204,11 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     }
     
     
+    func setUpFavicon (isFavourite:Bool) {
+        if isFavourite {
+            addToFav.setImage(fillIcon, for: .normal)
+        }
+    }
     //TODO: remove delegate func when remove delegate param from insert func
     func fetchedFavouriteLeuges(leuges: [League]) {
         

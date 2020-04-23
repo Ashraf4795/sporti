@@ -45,6 +45,11 @@ class DatabaseService : DatabaseServiceProtocol{
    
     
     func insertFavouruteLeuge(delegate: FavouriteLeugesDelegate , league : League) {
+        //Check if league already exist or not
+        if (isLeagueInFavourite(leagueId: league.leagueId)){
+            return
+        }
+        
         let favoutiteLeague = NSManagedObject(entity: entity!, insertInto: managedContext)
         favoutiteLeague.setValue(Int(league.leagueId), forKey: "leagueId")
         favoutiteLeague.setValue(league.strLeague, forKey: "strLeague")
@@ -63,5 +68,39 @@ class DatabaseService : DatabaseServiceProtocol{
     /*sara*/
     
     /*Ashraf*/
+    //Check if league is in favourite entity  or not
+    func isLeagueInFavourite (leagueId:Int)->Bool {
+        let fetchFavouriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LeagueEntity")
+        fetchFavouriteRequest.fetchLimit = 1
+        fetchFavouriteRequest.predicate = NSPredicate(format: "leagueId = %d", leagueId)
+        do {
+            let result = try managedContext.fetch(fetchFavouriteRequest)
+            print("isFavourit result : \(result.description)")
+            return result.count > 0
+        }catch {
+            
+        }
+        return false
+    }
+    
+    // delete a league from favourite entitiy
+    func deleteFromFavourite(delegate:LeagueDetailDelegate, leagueId: Int) {
+        let fetchFavouriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LeagueEntity")
+        fetchFavouriteRequest.fetchLimit = 1
+        fetchFavouriteRequest.predicate = NSPredicate(format: "leagueId = %d", leagueId)
+        do {
+            let result = try managedContext.fetch(fetchFavouriteRequest)
+            let objectToDelete = result[0] as! NSManagedObject
+            managedContext.delete(objectToDelete)
+            do {
+                try managedContext.save()
+            }catch {
+                delegate.error(result: Result.ERROR, message: "Delete not successful")
+            }
+        }catch {
+            delegate.error(result: Result.ERROR, message: "Unable to find this League")
+        }
+        
+    }
     /*Ashraf*/
 }

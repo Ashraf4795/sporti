@@ -21,6 +21,7 @@ UITableViewDelegate, LeagueDelegate {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = leaguesTitle
         print("view Did Load")
         let leaguePresenter:LeaguePresenter = LeaguePresenter(leagueDeleagte: self)
         tableView.delegate = self
