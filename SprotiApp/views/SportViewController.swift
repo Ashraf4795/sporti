@@ -9,23 +9,23 @@
 import UIKit
 import Kingfisher
 
-class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
+class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate,Refreshable {
  
     @IBOutlet weak var loadingProgress: UIActivityIndicatorView!
     
     @IBOutlet weak var sportCollectionView: UICollectionView!
     var sports:[Sport] = []
-
-   
+    
+    var sportPresenter:SportPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let sportPresenter:SportPresenter = SportPresenter(sportDeleagtee:self)
+        
+        sportPresenter = SportPresenter(sportDeleagtee:self)
+        
         sportCollectionView.delegate = self
         sportCollectionView.dataSource = self
         
-    sportPresenter.fetchSport()
         let numberOfCell = 2
         let cellSpacing = 10
         if let layout = sportCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
@@ -46,6 +46,16 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
     }
     */
     
+    override func viewWillAppear(_ animated: Bool) {
+        if Connectivity.isConnectedToInternet {
+            sportPresenter!.fetchSport()
+        }else {
+            loadingProgress.hidesWhenStopped = true
+            Notify.showAlert(viewController: self, _title: "No Connection", _message: "Please check your internet connection")
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sports.count
     }
@@ -62,10 +72,12 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         self.sports = sports
         if (sports.count == 0 )
         {
+            Notify.showAlert(viewController: self, _title: "No Data", _message: "No Sport Found")
             loadingProgress.startAnimating()
         }
         else
         {
+            sportCollectionView.refreshControl?.endRefreshing()
             loadingProgress.stopAnimating()
             loadingProgress.hidesWhenStopped = true
         }
@@ -99,8 +111,16 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         
     }
  
-  
+   @objc
+   func refreshData() {
+     sportPresenter?.fetchSport()
+   }
    
+   func setUpRefreshController() {
+     let refreshControl = UIRefreshControl()
+     refreshControl.tintColor = .white
+     refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+   }
    
 }
 

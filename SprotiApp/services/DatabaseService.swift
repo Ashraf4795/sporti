@@ -90,12 +90,14 @@ class DatabaseService : DatabaseServiceProtocol{
         fetchFavouriteRequest.predicate = NSPredicate(format: "leagueId = %d", leagueId)
         do {
             let result = try managedContext.fetch(fetchFavouriteRequest)
+            if(result.count > 0){
             let objectToDelete = result[0] as! NSManagedObject
             managedContext.delete(objectToDelete)
             do {
                 try managedContext.save()
             }catch {
                 delegate.error(result: Result.ERROR, message: "Delete not successful")
+            }
             }
         }catch {
             delegate.error(result: Result.ERROR, message: "Unable to find this League")

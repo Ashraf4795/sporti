@@ -9,4 +9,5 @@ target 'SprotiApp' do
   pod 'Kingfisher', '~> 4.7.0'
   pod 'SwiftyJSON', '~> 4.0.0'
   pod 'Alamofire', '~> 4.2.0'
+  pod 'lottie-ios'
 end

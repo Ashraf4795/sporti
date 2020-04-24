@@ -45,6 +45,8 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     @IBOutlet weak var noLatestImage: UIImageView!
     
+    @IBAction func retry(_ sender: Any) {
+    }
     
     @IBAction func back(_ sender: Any) {
         if !isFavourit {
@@ -116,6 +118,15 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
         return teams.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == teamCollectionView {
+            print("tema selected \(indexPath.row)")
+            let storyboard = UIStoryboard(name: "TeamDetailsStoryboard",bundle:nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "teamid") as! TeamDetailsViewController
+            viewController.idTeam = teams[indexPath.row].teamId
+            present(viewController, animated: true, completion: nil)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == upcomingCollectionView ){
             let event = upcomingEvents[indexPath.row]
