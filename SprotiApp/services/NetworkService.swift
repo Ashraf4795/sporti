@@ -13,7 +13,7 @@ import Alamofire
 class NetworkService : NetworkServiceProtocol{
    
     static let INSTANCE:NetworkServiceProtocol = NetworkService()
-    /*sara*/
+
     //get all sports
     func fetchSports(delegate: SportDelegate) {
         var sports:[Sport] = []
@@ -45,9 +45,7 @@ class NetworkService : NetworkServiceProtocol{
             }
         }
     }
-    /*sara*/
     
-    /*Ashraf*/
     //fetch leagues data with sport title
     func fetchLeaguesData(strSport: String,delegate:LeagueDelegate) {
         var leagues:[League] = []
@@ -124,7 +122,4 @@ class NetworkService : NetworkServiceProtocol{
             }
         }
     }
-    
-    
-    /*Ashraf*/
 }

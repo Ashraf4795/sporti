@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="England Leagues is Awsome" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4Sw-W1-hQg">
-                        <rect key="frame" x="80" y="44" width="228.5" height="26.5"/>
+                        <rect key="frame" x="80" y="44" width="340" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                     <constraint firstAttribute="trailing" secondItem="kt9-fw-Ste" secondAttribute="trailing" constant="20" id="KMV-Am-eIZ"/>
                     <constraint firstItem="7by-p4-UoS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KVh-P3-2pW"/>
                     <constraint firstAttribute="bottom" secondItem="7by-p4-UoS" secondAttribute="bottom" constant="23" id="R6a-qE-ihT"/>
-                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="127.5" id="alc-b0-h38"/>
+                    <constraint firstItem="kt9-fw-Ste" firstAttribute="leading" secondItem="4Sw-W1-hQg" secondAttribute="trailing" constant="16" id="alc-b0-h38"/>
                     <constraint firstAttribute="bottom" secondItem="4Sw-W1-hQg" secondAttribute="bottom" constant="37.5" id="mfX-VI-QKf"/>
                     <constraint firstItem="4Sw-W1-hQg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="xLm-y6-nqr"/>
                 </constraints>

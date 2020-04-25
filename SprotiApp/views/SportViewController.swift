@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate,Refreshable {
+class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
  
     @IBOutlet weak var loadingProgress: UIActivityIndicatorView!
     
@@ -111,16 +111,6 @@ class SportViewController: UIViewController ,SportDelegate,UICollectionViewDataS
         
     }
  
-   @objc
-   func refreshData() {
-     sportPresenter?.fetchSport()
-   }
-   
-   func setUpRefreshController() {
-     let refreshControl = UIRefreshControl()
-     refreshControl.tintColor = .white
-     refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-   }
    
 }
 

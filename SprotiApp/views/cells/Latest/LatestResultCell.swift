@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class LatestResultCell: UICollectionViewCell {
 
     
@@ -20,9 +20,17 @@ class LatestResultCell: UICollectionViewCell {
     @IBOutlet weak var homeName: UILabel!
     @IBOutlet weak var guestName: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setCell(event:Event) {
+        let homeBadgeUrl = URL(string: event.homeBadge ?? "" )
+        let guestBadgeUrl = URL(string: event.guestBadge ?? "" )
+
+        homeBadge.kf.setImage(with:homeBadgeUrl)
+        guestBadge.kf.setImage(with:guestBadgeUrl)
+        
+        homeScore.text = String(event.intHomeScore)
+        guestScore.text = String(event.intAwayScore)
+        homeName.text = event.strHomeTeam
+        guestName.text = event.strAwayTeam
     }
 
 }

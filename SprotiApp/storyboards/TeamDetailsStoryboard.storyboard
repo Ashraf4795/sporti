@@ -79,35 +79,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0j-Qg-oUK">
-                                <rect key="frame" x="27" y="593" width="59" height="54"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y0j-Qg-oUK">
+                                <rect key="frame" x="50" y="788" width="59" height="54"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="5ZY-7W-qhD"/>
                                     <constraint firstAttribute="height" constant="54" id="FgZ-u3-Y5J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Mqg-Bv-tyo"/>
                                     <constraint firstAttribute="width" constant="59" id="NNy-l8-uXd"/>
                                     <constraint firstAttribute="width" secondItem="y0j-Qg-oUK" secondAttribute="height" multiplier="59:54" id="nrV-2j-uBc"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irn-RY-scn">
-                                <rect key="frame" x="116" y="593" width="59" height="54"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Irn-RY-scn">
+                                <rect key="frame" x="139" y="788" width="59" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="8Rw-uL-c76"/>
                                     <constraint firstAttribute="width" secondItem="Irn-RY-scn" secondAttribute="height" multiplier="59:54" id="ZW4-xG-zQn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="dST-TX-eXH"/>
+                                    <constraint firstAttribute="height" constant="54" id="rM0-ix-cHB"/>
                                     <constraint firstAttribute="height" constant="54" id="zzu-vP-BdW"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39E-rE-9ad">
-                                <rect key="frame" x="288" y="593" width="59" height="54"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39E-rE-9ad">
+                                <rect key="frame" x="311" y="788" width="59" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="6AU-Un-ncd"/>
                                     <constraint firstAttribute="width" secondItem="39E-rE-9ad" secondAttribute="height" multiplier="59:54" id="Hoh-zX-qJh"/>
                                     <constraint firstAttribute="width" constant="59" id="IfY-qz-j6K"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Kx8-ji-Ggc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="rFY-3d-aGL"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-1e-18x">
-                                <rect key="frame" x="202" y="593" width="59" height="54"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-1e-18x">
+                                <rect key="frame" x="225" y="788" width="59" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="IAT-yy-Y1i"/>
                                     <constraint firstAttribute="width" constant="59" id="KhL-in-nGP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="LGI-3z-y1a"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="f5u-wL-ahr"/>
                                     <constraint firstAttribute="width" secondItem="WFB-1e-18x" secondAttribute="height" multiplier="59:54" id="tSb-ql-lkh"/>
                                 </constraints>
                             </imageView>

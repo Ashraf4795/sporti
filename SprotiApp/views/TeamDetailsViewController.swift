@@ -47,8 +47,8 @@ class TeamDetailsViewController: UIViewController,TeamDetailsDelegate {
         teamDetailsPresenter.fetchTeamDetails(idTeam: idTeam)
         
         vview.layer.cornerRadius = 100
-          facebookImageView.image = UIImage(named : "facebook.png")
-         twittwerImageView.image = UIImage(named : "twitter.png")
+        facebookImageView.image = UIImage(named : "facebook.png")
+        twittwerImageView.image = UIImage(named : "twitter.png")
         websiteImageView.image = UIImage(named : "website.png")
         InstagramImageView.image = UIImage(named : "instagram.png")
         

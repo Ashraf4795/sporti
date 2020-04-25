@@ -30,9 +30,9 @@
             filePath = "SprotiApp/views/LeugesDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "fetchedUpcomingEventData(events:)"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "fetchedLatestResultData(events:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "SprotiApp/views/LeugesDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "fetchedUpcomingEventData(events:)"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "fetchedLatestResultData(events:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "SprotiApp/views/LeugesDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "fetchedUpcomingEventData(events:)"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "fetchedTeamDetails(teams:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -176,22 +176,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
             endingLineNumber = "133"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6F07E25D-BABB-4615-AADA-7B04FCD7EB1D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SprotiApp/views/LeugesDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>

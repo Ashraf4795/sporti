@@ -71,7 +71,7 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         attachDelegate()
-        
+        setUpCollectionViewsSizeConfiguration()
         //TODO:check if this leagues is in favourit database or not
         isFavourit = db.isLeagueInFavourite(leagueId: selectedLeague!.leagueId)
         
@@ -129,35 +129,24 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == upcomingCollectionView ){
+           
             let event = upcomingEvents[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
-            cell.homeName.text = event.strHomeTeam
-            cell.guestName.text = event.strAwayTeam
-            cell.date.text = event.strDate
-            cell.time.text = event.strTime
-            let homeBadgeUrl = URL(string: event.homeBadge ?? "" )
-            cell.homeBadge.kf.setImage(with:homeBadgeUrl)
-            let guestBadge = URL(string: event.guestBadge ?? "" )
-            cell.guestBadge.kf.setImage(with:guestBadge)
+            cell.setCell(event: event)
             return cell
+        
         }else if (collectionView == latestCollectionView){
+            
             let event = latestResult[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "latestCell", for: indexPath) as! LatestResultCell
-            
-            let homeBadgeUrl = URL(string: event.homeBadge ?? "" )
-            cell.homeBadge.kf.setImage(with:homeBadgeUrl)
-            let guestBadge = URL(string: event.guestBadge ?? "" )
-            cell.guestBadge.kf.setImage(with:guestBadge)
-            cell.homeScore.text = String(event.intHomeScore)
-            cell.guestScore.text = String(event.intAwayScore)
-            cell.homeName.text = event.strHomeTeam
-            cell.guestName.text = event.strAwayTeam
+            cell.setCell(event: event)
             return cell
+            
         }else {
+            
             let team = teams[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCell", for: indexPath) as! teamCell
             let teamBadgeUrl = URL(string:team.teamBadge.appending("/preview"))
-            
             cell.teamBadge.kf.setImage(with: teamBadgeUrl, placeholder: UIImage(named: "placeHolder-1"))
             
             return cell
@@ -227,5 +216,18 @@ class LeugesDetailsViewController: UIViewController ,LeagueDetailDelegate,UIColl
     
     func error(message: String) {
         
+    }
+    
+    //configure collectionViews autosize
+    func setUpCollectionViewsSizeConfiguration(){
+        let layout = upcomingCollectionView.collectionViewLayout
+           if let flowLayout = layout as? UICollectionViewFlowLayout {
+               flowLayout.estimatedItemSize = CGSize(
+                   width: upcomingCollectionView.widestCellWidth,
+                   // Make the height a reasonable estimate to
+                   // ensure the scroll bar remains smooth
+                   height: 180
+               )
+           }
     }
 }
