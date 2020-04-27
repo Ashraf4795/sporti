@@ -15,8 +15,8 @@ class TabBarController: UITabBarController {
      
         
         var arrayOfImageNameForUnselectedState :[UIImage] = []
-        arrayOfImageNameForUnselectedState.append(UIImage(named:"unselectedstar.png")!)
         arrayOfImageNameForUnselectedState.append(UIImage(named:"unselectedsport.png")!)
+        arrayOfImageNameForUnselectedState.append(UIImage(named:"unselectedstar.png")!)
         
         if let count = self.tabBar.items?.count {
             for i in 0...(count-1) {

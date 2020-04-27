@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYa-Pi-ObI">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -14,10 +14,10 @@
             <objects>
                 <viewController storyboardIdentifier="leagueDetails" id="JCA-b3-1Zx" customClass="LeugesDetailsViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqa-Zt-x9B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-KV-N2x">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="League Details" id="qLw-fL-BDn">
                                         <barButtonItem key="leftBarButtonItem" title="back" image="chevron.left" catalog="system" style="plain" id="DSW-y8-gkd">
@@ -28,7 +28,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="star" catalog="system" style="plain" id="kkb-ij-Is7">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O3r-2M-td5">
-                                                <rect key="frame" x="372" y="17" width="22" height="22"/>
+                                                <rect key="frame" x="337" y="17" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="star" catalog="system"/>
@@ -42,7 +42,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2L-En-GXG">
-                                <rect key="frame" x="0.0" y="56" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="631"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kGl-p5-bVG">
                                         <rect key="frame" x="0.0" y="37" width="375" height="200"/>
@@ -174,7 +174,8 @@
                                     <constraint firstItem="lSh-Fc-PKA" firstAttribute="top" secondItem="j2L-En-GXG" secondAttribute="top" constant="8" id="b5z-Gh-8qM"/>
                                     <constraint firstItem="80z-w6-CVw" firstAttribute="leading" secondItem="j2L-En-GXG" secondAttribute="leading" constant="8" id="cke-14-ksA"/>
                                     <constraint firstItem="kGl-p5-bVG" firstAttribute="top" secondItem="lSh-Fc-PKA" secondAttribute="bottom" constant="8" id="gX3-vZ-FDt"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gmc-h6-rAU" secondAttribute="bottom" constant="8" id="mh9-Da-Dcn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gmc-h6-rAU" secondAttribute="bottom" constant="20" symbolic="YES" id="mh9-Da-Dcn"/>
+                                    <constraint firstItem="kGl-p5-bVG" firstAttribute="width" secondItem="j2L-En-GXG" secondAttribute="width" id="o1Z-Cz-kzI"/>
                                     <constraint firstItem="Xxg-Ub-pLk" firstAttribute="leading" secondItem="j2L-En-GXG" secondAttribute="leading" constant="9" id="p1n-ys-O13"/>
                                     <constraint firstItem="Ugm-JG-Fad" firstAttribute="leading" secondItem="j2L-En-GXG" secondAttribute="leading" id="yIC-o2-NXn"/>
                                     <constraint firstItem="lSh-Fc-PKA" firstAttribute="leading" secondItem="j2L-En-GXG" secondAttribute="leading" constant="8" id="yth-3r-cTk"/>
@@ -224,7 +225,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fla-en-OuO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dOs-36-5eD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -241,11 +242,11 @@
             <objects>
                 <viewController storyboardIdentifier="leugesId" id="nYa-Pi-ObI" customClass="LeugesViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSu-GL-DAj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yKb-YG-cHJ" customClass="Leag">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nYa-Pi-ObI" id="3nf-1d-IrG"/>

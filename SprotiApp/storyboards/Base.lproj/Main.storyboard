@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdV-TY-x8l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3C-sN-JQn">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -50,10 +50,10 @@
                                                         <constraint firstAttribute="height" constant="102" id="uM6-vj-fqb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-sh-RaL">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-sh-RaL">
                                                     <rect key="frame" x="0.0" y="104.5" width="154" height="44.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -195,10 +195,39 @@
             </objects>
             <point key="canvasLocation" x="-250.40000000000001" y="794.75262368815595"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="BAc-tM-mQp">
+            <objects>
+                <viewController id="I3C-sN-JQn" customClass="SplashViewController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ui-vd-ny4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-MV-L3Q" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8az-FZ-mlh" firstAttribute="bottom" secondItem="mtJ-MV-L3Q" secondAttribute="bottom" id="Ohy-iw-Kt4"/>
+                            <constraint firstItem="8az-FZ-mlh" firstAttribute="trailing" secondItem="mtJ-MV-L3Q" secondAttribute="trailing" id="osS-49-lYj"/>
+                            <constraint firstItem="mtJ-MV-L3Q" firstAttribute="top" secondItem="8az-FZ-mlh" secondAttribute="top" id="uZF-jI-Gp3"/>
+                            <constraint firstItem="mtJ-MV-L3Q" firstAttribute="leading" secondItem="8az-FZ-mlh" secondAttribute="leading" id="wNQ-ox-ovN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8az-FZ-mlh"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="mtJ-MV-L3Q" id="DTE-GE-XeV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1c-wt-xN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1004" y="46"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NTI-PK-BRz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CdV-TY-x8l" customClass="TabBarController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="CdV-TY-x8l" customClass="TabBarController" customModule="SprotiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nVJ-CA-mQi">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -207,8 +236,8 @@
                         <color key="selectedImageTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="evB-yu-4VR" kind="relationship" relationship="viewControllers" id="kVH-XW-Lrq"/>
                         <segue destination="3WF-zw-oNe" kind="relationship" relationship="viewControllers" id="Dll-L7-evi"/>
+                        <segue destination="evB-yu-4VR" kind="relationship" relationship="viewControllers" id="lhb-4P-4tG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23o-Wx-tBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

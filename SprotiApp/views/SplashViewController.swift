@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Lottie
+
 class SplashViewController: UIViewController {
 
-    
-    @IBOutlet weak var animationView: AnimationView!
+        
+    @IBOutlet var animationView: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +20,19 @@ class SplashViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[unowned self] in
-            self.animationView.animation = Animation.named("splash")
-            self.animationView.loopMode = .loop
-            self.animationView.play()
-        }
-        performSegue(withIdentifier: "next", sender: nil)
+        let tabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! TabBarController
+        
+        self.animationView.animation = Animation.named("splash")
+        self.animationView.loopMode = .repeat(3)
+        self.animationView.play()
+        self.animationView.play(completion: { [weak self]boolVal in
+            guard let self = self else {return}
+            tabBarVC.modalPresentationStyle = .fullScreen
+                   self.present(tabBarVC, animated: true, completion: nil)
+            
+        })
+        
+       
     }
     /*
     // MARK: - Navigation
