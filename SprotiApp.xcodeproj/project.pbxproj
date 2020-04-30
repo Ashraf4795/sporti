@@ -41,6 +41,9 @@
 		DC0FA472244D45440035E48B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA471244D45440035E48B /* Event.swift */; };
 		DC0FA474244D4ACB0035E48B /* LeagueDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */; };
 		DC54226D24513F550015C0B8 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54226C24513F550015C0B8 /* Notify.swift */; };
+		DC56E3F4245AF1B50031057D /* FetchAllTeamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC56E3F3245AF1B50031057D /* FetchAllTeamTest.swift */; };
+		DC56E3F7245AF2410031057D /* MockFetchAllTeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC56E3F6245AF2410031057D /* MockFetchAllTeamService.swift */; };
+		DC56E3F9245AF77C0031057D /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC56E3F8245AF77C0031057D /* NetworkResult.swift */; };
 		DC5B1DA6244E659A00587F57 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA5244E659A00587F57 /* Team.swift */; };
 		DC5B1DA8244E7A7500587F57 /* Extracter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1DA7244E7A7500587F57 /* Extracter.swift */; };
 		DC5B1DAE244E908600587F57 /* UpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5B1DAC244E908600587F57 /* UpcomingCell.xib */; };
@@ -65,7 +68,18 @@
 		DC9873EC24567C4A0094A80B /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = DC9873EB24567C4A0094A80B /* splash.json */; };
 		DC9968E1244CF4860073EDF1 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E0244CF4860073EDF1 /* League.swift */; };
 		DC9968E3244CF5DB0073EDF1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9968E2244CF5DB0073EDF1 /* Const.swift */; };
+		DCFFF00B245AE686001093D1 /* FetchAllSportTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFFF00A245AE686001093D1 /* FetchAllSportTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCFFF00D245AE686001093D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBF14E7C244B470E00F14A4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBF14E83244B470E00F14A4A;
+			remoteInfo = SprotiApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5D15431A37C1E6E31DF45473 /* Pods_SprotiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SprotiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +120,9 @@
 		DC0FA471244D45440035E48B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DC0FA473244D4ACB0035E48B /* LeagueDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsPresenter.swift; sourceTree = "<group>"; };
 		DC54226C24513F550015C0B8 /* Notify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
+		DC56E3F3245AF1B50031057D /* FetchAllTeamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllTeamTest.swift; sourceTree = "<group>"; };
+		DC56E3F6245AF2410031057D /* MockFetchAllTeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchAllTeamService.swift; sourceTree = "<group>"; };
+		DC56E3F8245AF77C0031057D /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		DC5B1DA5244E659A00587F57 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		DC5B1DA7244E7A7500587F57 /* Extracter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracter.swift; sourceTree = "<group>"; };
 		DC5B1DAC244E908600587F57 /* UpcomingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCell.xib; sourceTree = "<group>"; };
@@ -130,6 +147,9 @@
 		DC9873EB24567C4A0094A80B /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		DC9968E0244CF4860073EDF1 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		DC9968E2244CF5DB0073EDF1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		DCFFF008245AE686001093D1 /* FetchAllSportTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchAllSportTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCFFF00A245AE686001093D1 /* FetchAllSportTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllSportTest.swift; sourceTree = "<group>"; };
+		DCFFF00C245AE686001093D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D0D27F4775710737627DDD /* Pods_SprotiApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFFF005245AE686001093D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +193,7 @@
 			children = (
 				CB95CC50244CA18E00355DC3 /* Podfile */,
 				CBF14E86244B470E00F14A4A /* SprotiApp */,
+				DCFFF009245AE686001093D1 /* FetchAllSportTest */,
 				CBF14E85244B470E00F14A4A /* Products */,
 				3B600168E62F19365C0ED09A /* Pods */,
 				A39CEFEE0219E0D76A24B359 /* Frameworks */,
@@ -176,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				CBF14E84244B470E00F14A4A /* SprotiApp.app */,
+				DCFFF008245AE686001093D1 /* FetchAllSportTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +232,7 @@
 				CBF14E96244B470E00F14A4A /* Info.plist */,
 				CBF14E8E244B470E00F14A4A /* SprotiApp.xcdatamodeld */,
 				DC9968E2244CF5DB0073EDF1 /* Const.swift */,
+				DC56E3F8245AF77C0031057D /* NetworkResult.swift */,
 			);
 			path = SprotiApp;
 			sourceTree = "<group>";
@@ -267,6 +297,14 @@
 				DC8AA7E4244FD126002F8D78 /* LatestResultCell.xib */,
 			);
 			path = Latest;
+			sourceTree = "<group>";
+		};
+		DC56E3F5245AF2230031057D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DC56E3F6245AF2410031057D /* MockFetchAllTeamService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		DC5B1DAF244E909200587F57 /* Upcoming */ = {
@@ -356,6 +394,17 @@
 			path = team;
 			sourceTree = "<group>";
 		};
+		DCFFF009245AE686001093D1 /* FetchAllSportTest */ = {
+			isa = PBXGroup;
+			children = (
+				DC56E3F5245AF2230031057D /* Mocks */,
+				DC56E3F3245AF1B50031057D /* FetchAllTeamTest.swift */,
+				DCFFF00A245AE686001093D1 /* FetchAllSportTest.swift */,
+				DCFFF00C245AE686001093D1 /* Info.plist */,
+			);
+			path = FetchAllSportTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,19 +427,42 @@
 			productReference = CBF14E84244B470E00F14A4A /* SprotiApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DCFFF007245AE686001093D1 /* FetchAllSportTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCFFF011245AE686001093D1 /* Build configuration list for PBXNativeTarget "FetchAllSportTest" */;
+			buildPhases = (
+				DCFFF004245AE686001093D1 /* Sources */,
+				DCFFF005245AE686001093D1 /* Frameworks */,
+				DCFFF006245AE686001093D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCFFF00E245AE686001093D1 /* PBXTargetDependency */,
+			);
+			name = FetchAllSportTest;
+			productName = FetchAllSportTest;
+			productReference = DCFFF008245AE686001093D1 /* FetchAllSportTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CBF14E7C244B470E00F14A4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = saraMohamed;
 				TargetAttributes = {
 					CBF14E83244B470E00F14A4A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					DCFFF007245AE686001093D1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CBF14E83244B470E00F14A4A;
 					};
 				};
 			};
@@ -408,6 +480,7 @@
 			projectRoot = "";
 			targets = (
 				CBF14E83244B470E00F14A4A /* SprotiApp */,
+				DCFFF007245AE686001093D1 /* FetchAllSportTest */,
 			);
 		};
 /* End PBXProject section */
@@ -435,6 +508,13 @@
 				DC5B1DAE244E908600587F57 /* UpcomingCell.xib in Resources */,
 				CB3D66A92451199300DE90A0 /* unselectedsport.png in Resources */,
 				CBF14E8D244B470E00F14A4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFFF006245AE686001093D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +601,7 @@
 				DC5DE93A244B95390070894E /* FavouritLeugesViewController.swift in Sources */,
 				CB3D669E245118A600DE90A0 /* TeamDetail.swift in Sources */,
 				DC5DE935244B826C0070894E /* sport.swift in Sources */,
+				DC56E3F9245AF77C0031057D /* NetworkResult.swift in Sources */,
 				DC0FA470244D44140035E48B /* LeagueDetailDelegate.swift in Sources */,
 				DC0FA463244D055A0035E48B /* LeagueDelegate.swift in Sources */,
 				DC67B66A2453E647009EE15A /* UIConfiguration.swift in Sources */,
@@ -532,7 +613,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCFFF004245AE686001093D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC56E3F7245AF2410031057D /* MockFetchAllTeamService.swift in Sources */,
+				DCFFF00B245AE686001093D1 /* FetchAllSportTest.swift in Sources */,
+				DC56E3F4245AF1B50031057D /* FetchAllTeamTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCFFF00E245AE686001093D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBF14E83244B470E00F14A4A /* SprotiApp */;
+			targetProxy = DCFFF00D245AE686001093D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CBF14E8B244B470E00F14A4A /* Main.storyboard */ = {
@@ -691,6 +790,47 @@
 			};
 			name = Release;
 		};
+		DCFFF00F245AE686001093D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FetchAllSportTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.FetchAllSportTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SprotiApp.app/SprotiApp";
+			};
+			name = Debug;
+		};
+		DCFFF010245AE686001093D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FetchAllSportTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.FetchAllSportTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SprotiApp.app/SprotiApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -708,6 +848,15 @@
 			buildConfigurations = (
 				CBF14E9A244B470E00F14A4A /* Debug */,
 				CBF14E9B244B470E00F14A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCFFF011245AE686001093D1 /* Build configuration list for PBXNativeTarget "FetchAllSportTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCFFF00F245AE686001093D1 /* Debug */,
+				DCFFF010245AE686001093D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
